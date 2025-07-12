@@ -1,0 +1,460 @@
+/* Theme System CSS */
+
+/* Light Theme (Default) */
+.light-theme {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7fafc;
+  --bg-tertiary: #edf2f7;
+  --text-primary: #2d3748;
+  --text-secondary: #718096;
+  --text-muted: #a0aec0;
+  --border-color: #e2e8f0;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --shadow-heavy: rgba(0, 0, 0, 0.25);
+  
+  /* Navigation specific */
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-border: rgba(226, 232, 240, 0.8);
+  
+  /* Card backgrounds */
+  --card-bg: #ffffff;
+  --card-hover-bg: #f7fafc;
+  
+  /* Form elements */
+  --input-bg: #f7fafc;
+  --input-border: #e2e8f0;
+  --input-focus-border: #667eea;
+  
+  /* Overlay colors */
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  --modal-bg: rgba(0, 0, 0, 0.8);
+}
+
+/* Dark Theme */
+.dark-theme {
+  --bg-primary: #1a202c;
+  --bg-secondary: #2d3748;
+  --bg-tertiary: #4a5568;
+  --text-primary: #f7fafc;
+  --text-secondary: #e2e8f0;
+  --text-muted: #a0aec0;
+  --border-color: #4a5568;
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.4);
+  --shadow-heavy: rgba(0, 0, 0, 0.6);
+  
+  /* Navigation specific */
+  --nav-bg: rgba(26, 32, 44, 0.95);
+  --nav-border: rgba(74, 85, 104, 0.8);
+  
+  /* Card backgrounds */
+  --card-bg: #2d3748;
+  --card-hover-bg: #4a5568;
+  
+  /* Form elements */
+  --input-bg: #2d3748;
+  --input-border: #4a5568;
+  --input-focus-border: #667eea;
+  
+  /* Overlay colors */
+  --overlay-bg: rgba(0, 0, 0, 0.7);
+  --modal-bg: rgba(0, 0, 0, 0.9);
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle {
+  position: relative;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-full);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  background: var(--gradient-primary);
+  color: white;
+  border-color: transparent;
+  transform: scale(1.1);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Theme toggle icon animation */
+.theme-toggle i {
+  font-size: 1.2rem;
+  transition: all var(--transition-normal);
+  position: relative;
+  z-index: 2;
+}
+
+/* Sun icon for light theme */
+.light-theme .theme-toggle i::before {
+  content: '\f185'; /* fa-sun */
+}
+
+/* Moon icon for dark theme */
+.dark-theme .theme-toggle i::before {
+  content: '\f186'; /* fa-moon */
+}
+
+/* Theme toggle animation effect */
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  transition: all 0.6s ease;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.theme-toggle:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+/* Theme transition animations */
+.theme-transition {
+  transition: all 0.3s ease;
+}
+
+/* Specific element theme transitions */
+body.theme-transition,
+body.theme-transition *,
+body.theme-transition *::before,
+body.theme-transition *::after {
+  transition: all 0.3s ease !important;
+  transition-delay: 0s !important;
+}
+
+/* Dark theme specific adjustments */
+.dark-theme .navbar {
+  background: var(--nav-bg);
+  border-bottom-color: var(--nav-border);
+  backdrop-filter: blur(10px);
+}
+
+.dark-theme .hero::before {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%234a5568" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.dark-theme .portfolio-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.dark-theme .service-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.dark-theme .service-card:hover {
+  background: var(--card-hover-bg);
+  border-color: var(--primary-color);
+}
+
+.dark-theme .testimonial-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.dark-theme .blog-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.dark-theme .contact-form {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.dark-theme .contact-method {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+}
+
+.dark-theme .social-link {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+}
+
+.dark-theme .footer-social .social-link {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+}
+
+/* Form elements in dark theme */
+.dark-theme .form-group input,
+.dark-theme .form-group select,
+.dark-theme .form-group textarea {
+  background: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--text-primary);
+}
+
+.dark-theme .form-group input::placeholder,
+.dark-theme .form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.dark-theme .form-group input:focus,
+.dark-theme .form-group select:focus,
+.dark-theme .form-group textarea:focus {
+  border-color: var(--input-focus-border);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* Skill tags in dark theme */
+.dark-theme .skill-tag {
+  background: var(--bg-tertiary);
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+.dark-theme .skill-tag:hover {
+  background: var(--gradient-primary);
+  color: white;
+  border-color: transparent;
+}
+
+/* Blog tags in dark theme */
+.dark-theme .blog-tag {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+/* Tech tags in dark theme */
+.dark-theme .tech-tag {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Filter buttons in dark theme */
+.dark-theme .filter-btn {
+  background: var(--bg-tertiary);
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+.dark-theme .filter-btn:hover,
+.dark-theme .filter-btn.active {
+  background: var(--gradient-primary);
+  color: white;
+  border-color: transparent;
+}
+
+/* Checkbox styling in dark theme */
+.dark-theme .checkmark {
+  border-color: var(--border-color);
+  background: var(--bg-tertiary);
+}
+
+.dark-theme .checkbox-item input[type="checkbox"]:checked + .checkmark {
+  background: var(--gradient-primary);
+  border-color: transparent;
+}
+
+/* Scrollbar styling for dark theme */
+.dark-theme::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark-theme::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+.dark-theme::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+.dark-theme::-webkit-scrollbar-thumb:hover {
+  background: var(--border-color);
+}
+
+/* Selection styling for dark theme */
+.dark-theme ::selection {
+  background: rgba(102, 126, 234, 0.3);
+  color: var(--text-primary);
+}
+
+/* Image overlays and filters for dark theme */
+.dark-theme .profile-image {
+  box-shadow: 0 0 0 4px var(--bg-secondary);
+}
+
+.dark-theme .about-photo,
+.dark-theme .author-photo,
+.dark-theme .blog-photo,
+.dark-theme .project-image {
+  filter: brightness(0.9) contrast(1.1);
+}
+
+/* Gradient adjustments for dark theme */
+.dark-theme .hero {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.dark-theme .about {
+  background: var(--bg-secondary);
+}
+
+.dark-theme .services {
+  background: var(--bg-secondary);
+}
+
+.dark-theme .blog {
+  background: var(--bg-secondary);
+}
+
+.dark-theme .footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+}
+
+/* Theme-specific animations */
+@keyframes themeTransition {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.theme-switching {
+  animation: themeTransition 0.3s ease;
+}
+
+/* Auto dark mode based on system preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1a202c;
+    --bg-secondary: #2d3748;
+    --bg-tertiary: #4a5568;
+    --text-primary: #f7fafc;
+    --text-secondary: #e2e8f0;
+    --text-muted: #a0aec0;
+    --border-color: #4a5568;
+    --shadow-light: rgba(0, 0, 0, 0.3);
+    --shadow-medium: rgba(0, 0, 0, 0.4);
+    --shadow-heavy: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Theme persistence indicator */
+.theme-indicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+}
+
+.theme-indicator.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.theme-indicator i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.theme-indicator p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* High contrast theme support */
+@media (prefers-contrast: high) {
+  .dark-theme {
+    --bg-primary: #000000;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #333333;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --border-color: #666666;
+  }
+  
+  .light-theme {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f0f0f0;
+    --bg-tertiary: #e0e0e0;
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --border-color: #999999;
+  }
+}
+
+/* Theme toggle accessibility */
+.theme-toggle:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.theme-toggle[aria-pressed="true"] {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+/* Screen reader only text for theme toggle */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Theme transition performance optimization */
+.theme-transition-disable * {
+  transition: none !important;
+}
+
+/* Print styles - force light theme */
+@media print {
+  * {
+    --bg-primary: #ffffff !important;
+    --bg-secondary: #f7fafc !important;
+    --text-primary: #000000 !important;
+    --text-secondary: #333333 !important;
+    background: white !important;
+    color: black !important;
+  }
+  
+  .theme-toggle {
+    display: none !important;
+  }
+}
+

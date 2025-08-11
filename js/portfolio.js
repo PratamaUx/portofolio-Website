@@ -158,8 +158,8 @@ class PortfolioManager {
                 client: 'StartupCommerce Inc.'
             },
             banking: {
-                title: 'FinanceFlow - Mobile Banking',
-                category: 'Mobile App • UI/UX Design',
+                title: 'Duta Wisata Kabupaten Pati',
+                category: 'Prestasi Kabupaten',
                 description: 'Aplikasi mobile banking dengan desain yang clean dan fitur-fitur inovatif untuk kemudahan transaksi keuangan sehari-hari.',
                 challenge: 'Menciptakan aplikasi banking yang aman, mudah digunakan, dan dapat dipercaya oleh pengguna dari berbagai kalangan usia.',
                 solution: 'Menerapkan prinsip security by design, menggunakan biometric authentication, dan menyederhanakan user flow untuk transaksi umum.',
@@ -171,34 +171,33 @@ class PortfolioManager {
                 ],
                 technologies: ['React Native', 'Firebase', 'Biometric API', 'Figma', 'Principle'],
                 images: [
-                    'images/portfolio/banking-1.jpg',
-                    'images/portfolio/banking-2.jpg',
-                    'images/portfolio/banking-3.jpg'
+                    'images/portfolio/Duwis_Pati1.jpg',
+                    'images/portfolio/Duwis_Pati2.jpg',
+                    'images/portfolio/Duwis_Pati3.jpg'
                 ],
                 duration: '4 bulan',
                 client: 'FinTech Solutions'
             },
             dashboard: {
-                title: 'DataViz Pro - Analytics Dashboard',
-                category: 'Web Development • UI/UX Design',
-                description: 'Dashboard analytics yang powerful dengan visualisasi data yang interaktif dan real-time updates untuk business intelligence.',
-                challenge: 'Menampilkan data kompleks dalam format yang mudah dipahami dan actionable untuk decision makers.',
-                solution: 'Menggunakan advanced data visualization libraries dan implementasi real-time data streaming dengan WebSocket.',
+                title: 'Membangun Relasi dalam Business',
+                category: 'Sekretaris Direksi',
+                description: 'Relasi yang kuat adalah kunci keberhasilan bisnis. Komunikasi, kepercayaan, dan kolaborasi jadi fondasinya.',
+                challenge: 'Kurangnya Kepercayaan di Awal Kerja Sama. Komunikasi yang Kurang Efektif',
+                solution: ' Bangun Trust dengan Konsistensi & Transparansi,Kembangkan Komunikasi Dua Arah yang Aktif,Perluas Jaringan secara Aktif.',
                 results: [
-                    'Data processing speed 10x lebih cepat',
-                    'User adoption rate 85%',
-                    'Decision making time berkurang 50%',
-                    'ROI tracking accuracy 95%'
+                    'Membangun relasi lebih tepat sasaran lebih',
+                    'Meningkatkakn Citra dan Kepercayaan Bisnis 85%',
+          
                 ],
-                technologies: ['Vue.js', 'D3.js', 'Python', 'PostgreSQL', 'WebSocket', 'Docker'],
+                technologies: ['CRM', 'LinkedIn', 'Communication Tool'],
                 images: [
-                    'images/portfolio/dashboard-1.jpg',
-                    'images/portfolio/dashboard-2.jpg',
-                    'images/portfolio/dashboard-3.jpg'
+                    'images/portfolio/Membangunrelasi1.jpg',
+                    'images/portfolio/Membangunrelasi2.jpg',
+                    'images/portfolio/Membangunrelasi3.jpg'
                 ],
                 liveUrl: 'https://dataviz-pro-demo.com',
-                duration: '5 bulan',
-                client: 'Analytics Corp'
+                duration: '2 Tahun',
+                client: 'Kerjasama'
             },
             branding: {
                 title: 'GreenTech - Brand Identity',
@@ -222,47 +221,44 @@ class PortfolioManager {
                 client: 'GreenTech Innovations'
             },
             lms: {
-                title: 'EduPlatform - Learning Management System',
-                category: 'Web Development • UI/UX Design',
-                description: 'Platform pembelajaran online dengan fitur video streaming, quiz interaktif, dan progress tracking untuk institusi pendidikan.',
-                challenge: 'Membuat platform pembelajaran yang engaging dan dapat mengakomodasi berbagai gaya belajar siswa.',
-                solution: 'Implementasi adaptive learning algorithm dan gamification elements untuk meningkatkan engagement.',
+                title: 'CRM (Customer Relationship Management)',
+                category: '• Marketing Konvensional',
+                description: 'Meningkatkan retensi pelanggan, repeat order dan life time value pelanggan.',
+                challenge: 'Pengelolaan Data dan Segmentasi Pelanggan, Perancangan dan Implementasi Kampanye CRM,Analisis Kinerja dan Penguatan Hubungan Pelanggan..',
+                solution: 'Implementasi Sales Courtesy untuk menjaga kepercayaan pelanggan, Mengadakan Sales Call dan Visit serta Telemarketing dan Analisis Kebutuhan serta jaringan pelanggan.',
                 results: [
-                    'Student engagement rate 90%',
-                    'Course completion rate +40%',
-                    'Teacher productivity meningkat 60%',
-                    'Platform uptime 99.9%'
+                    'Strategic Thinking & Customer Journey 90%',
+                    'productivity meningkat 60%',
                 ],
-                technologies: ['Next.js', 'Prisma', 'Stripe', 'AWS', 'WebRTC', 'TensorFlow'],
+                technologies: ['CRM Website', 'Microsoft Excel'],
                 images: [
-                    'images/portfolio/lms-1.jpg',
-                    'images/portfolio/lms-2.jpg',
-                    'images/portfolio/lms-3.jpg'
+                    'images/portfolio/Sales1.png',
+                    'images/portfolio/Sales2.png',
+                    'images/portfolio/Sales3.png'
                 ],
-                liveUrl: 'https://eduplatform-demo.com',
-                duration: '6 bulan',
-                client: 'EduTech Institute'
+                duration: '1 Tahun',
+                client: 'Sertifikasi dan Pelatihan'
             },
             fooddelivery: {
-                title: 'FoodieGo - Food Delivery App',
-                category: 'Mobile App • UI/UX Design',
-                description: 'Aplikasi food delivery dengan interface yang menarik dan fitur tracking real-time untuk pengalaman pengguna yang optimal.',
-                challenge: 'Menciptakan user experience yang seamless dari pemilihan makanan hingga delivery tracking.',
-                solution: 'Implementasi real-time GPS tracking, smart recommendation system, dan streamlined checkout process.',
+                title: 'Mas Mbak Jawa Tengah 2024',
+                category: 'Prestasi Provinsi',
+                description: 'keterampilan komunikasi, pengetahuan pariwisata, dan soft skills yang mendukung peran sebagai representatif daerah.',
+                challenge: 'Kurangnya Minat Generasi Muda terhadap Pariwisata Lokal,Tantangan Bahasa dan Pengetahuan Global.',
+                solution: 'Rutin melatih kemampuan bahasa Inggris atau bahasa asing lain.Update pengetahuan umum dan isu pariwisata global serta lokal secara berkala.',
                 results: [
-                    'Order completion rate 95%',
-                    'Average delivery time 25 menit',
-                    'User retention rate 70%',
-                    'Restaurant partner satisfaction 4.7/5'
+                    'Tumbuhnya Wisata Alternatif dan Ekonomi Lokal UMKM di Pati 20%',
+                    'Branding Positif Duta Wisata di Media dan Masyarakat 89%',
+                    'Kompetensi Pribadi yang Meningkat 70%',
+                    'Peningkatan Kesadaran dan Minat Wisata Lokal 50%'
                 ],
-                technologies: ['Flutter', 'Firebase', 'Google Maps API', 'Stripe', 'Figma'],
+                technologies: ['Instagram', 'Youtube', 'Tiktok', 'Website', 'Meta Business Suite'],
                 images: [
-                    'images/portfolio/fooddelivery-1.jpg',
-                    'images/portfolio/fooddelivery-2.jpg',
-                    'images/portfolio/fooddelivery-3.jpg'
+                    'images/portfolio/MasMbak1.jpg',
+                    'images/portfolio/MasMbak2.jpg',
+                    'images/portfolio/MasMbak3.jpg'
                 ],
-                duration: '4 bulan',
-                client: 'FoodTech Startup'
+                duration: '1 Tahun',
+                client: 'Desa Wisata dan Wisatawan'
             }
         };
         

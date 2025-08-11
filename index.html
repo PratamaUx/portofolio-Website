@@ -1,898 +1,715 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wahyu Yoga pratama - Sekretariat Direksi</title>
-    <meta name="description" content="Portfolio website Wahyu Yoga Pratama - Digital Innovator, UI/UX Designer, dan Full-Stack Developer dengan 5+ tahun pengalaman">
-    <meta name="keywords" content="UI/UX Design, Web Development, Digital Strategy, Portfolio, Wahyu Yoga Pratama">
-    <meta name="author" content="Wahyu Yoga Pratama">
-    
+    <meta
+      name="description"
+      content="Portfolio website Wahyu Yoga Pratama - Digital Innovator, UI/UX Designer, dan Full-Stack Developer dengan 5+ tahun pengalaman"
+    />
+    <meta
+      name="keywords"
+      content="UI/UX Design, Web Development, Digital Strategy, Portfolio, Wahyu Yoga Pratama"
+    />
+    <meta name="author" content="Wahyu Yoga Pratama" />
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Wahyu Yoga Pratama - Digital Innovator & Creative Designer">
-    <meta property="og:description" content="Portfolio website showcasing innovative digital solutions and creative designs">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wahyuyogapratama.com">
-    
+    <meta
+      property="og:title"
+      content="Wahyu Yoga Pratama - Digital Innovator & Creative Designer"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio website showcasing innovative digital solutions and creative designs"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wahyuyogapratama.com" />
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- CSS Files -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/themes.css">
-    
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/themes.css" />
+
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
-</head>
-<body class="light-theme">
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico" />
+  </head>
+  <body class="light-theme">
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">
-                    <span class="logo-text">Wahyu</span>
-                    <span class="logo-accent">YP</span>
-                </a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#portfolio" class="nav-link">Portfolio</a>
-                <a href="#blog" class="nav-link">Blog</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="#home">
+            <span class="logo-text">Wahyu</span>
+            <span class="logo-accent">YP</span>
+          </a>
         </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+          <a href="#blog" class="nav-link">Blog</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-greeting">
-                        <span class="greeting-text">Halo, Saya</span>
-                    </div>
-                    <h1 class="hero-title">
-                        <span class="name-text">Wahyu Yoga Pratama </span>
-                        <span class="title-subtitle">Content Creator l Activist l Speaker l UI/UX Designer l Corporate Secretary Assistant</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        Berpengalaman sebagai Corporate Secretary Assistant. Menguasai Manajemen Keuangan, analisis data dan ekonomi,
-                        leadership, Good communication skills dan UI/UX Design dan Full-Stack Development membantu bisnis UMKM,
-                        menciptakan solusi digital strategis serta membangun komunikasi korporat yang efektif.
-                        telah menjangkau lebih dari 42.000 view, memperkuat daya jangkau dan citra merek.
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Proyek Selesai</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Tahun Pengalaman</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">30+</span>
-                            <span class="stat-label">Klien Puas</span>
-                        </div>
-                    </div>
-                    <div class="hero-buttons">
-                        <a href="#portfolio" class="btn btn-primary">
-                            <i class="fas fa-briefcase"></i>
-                            Lihat Portfolio
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-envelope"></i>
-                            Hubungi Saya
-                        </a>
-                        <a href="assets/documents/CV_WahyuYogaPratama_Professional.pdf" class="btn btn-outline" download>
-                            <i class="fas fa-download"></i>
-                            Download CV
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="image-container">
-                        <div class="profile-image">
-                            <img src="images/hero/FotoProfile_2.jpg" alt="Wahyu Yoga Pratama" class="profile-photo">
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="floating-elements">
-                            <div class="floating-element element-1">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <div class="floating-element element-2">
-                                <i class="fas fa-palette"></i>
-                            </div>
-                            <div class="floating-element element-3">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <div class="floating-element element-4">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-greeting">
+              <span class="greeting-text">Halo, Saya</span>
             </div>
-            <div class="scroll-indicator">
-                <div class="scroll-arrow">
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <span class="scroll-text">Scroll untuk melihat lebih</span>
+            <h1 class="hero-title">
+              <span class="name-text">Wahyu Yoga Pratama </span>
+              <span class="title-subtitle"
+                >Content Creator l Activist l Speaker l UI/UX Designer l
+                Corporate Secretary Assistant</span
+              >
+            </h1>
+            <p class="hero-subtitle">
+              Berpengalaman sebagai Corporate Secretary Assistant. Menguasai
+              Manajemen Keuangan, analisis data dan ekonomi, leadership, Good
+              communication skills dan UI/UX Design dan Full-Stack Development
+              membantu bisnis UMKM, menciptakan solusi digital strategis serta
+              membangun komunikasi korporat yang efektif. telah menjangkau lebih
+              dari 42.000 view, memperkuat daya jangkau dan citra merek.
+            </p>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Proyek Selesai</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Tahun Pengalaman</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">30+</span>
+                <span class="stat-label">Klien Puas</span>
+              </div>
             </div>
+            <div class="hero-buttons">
+              <a href="#portfolio" class="btn btn-primary">
+                <i class="fas fa-briefcase"></i>
+                Lihat Portfolio
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i>
+                Hubungi Saya
+              </a>
+              <a
+                href="assets/documents/CV_WahyuYogaPratama_Professional.pdf"
+                class="btn btn-outline"
+                download
+              >
+                <i class="fas fa-download"></i>
+                Download CV
+              </a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="image-container">
+              <div class="profile-image">
+                <img
+                  src="images/hero/FotoProfile_2.jpg"
+                  alt="Wahyu Yoga Pratama"
+                  class="profile-photo"
+                />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="floating-elements">
+                <div class="floating-element element-1">
+                  <i class="fas fa-code"></i>
+                </div>
+                <div class="floating-element element-2">
+                  <i class="fas fa-palette"></i>
+                </div>
+                <div class="floating-element element-3">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="floating-element element-4">
+                  <i class="fas fa-rocket"></i>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="scroll-indicator">
+          <div class="scroll-arrow">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <span class="scroll-text">Scroll untuk melihat lebih</span>
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Tentang Saya</span>
-                <h2 class="section-title">Passion untuk Inovasi Business</h2>
-                <p class="section-subtitle">
-                    Menggabungkan kreativitas business dengan teknologi untuk menciptakan solusi yang bermakna
-                </p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="about-intro">
-                        <h3>Halo! Saya Wahyu Yoga Pratama</h3>
-                        <p>
-                            Saya adalah individu yang memiliki motivasi tinggi dalam dunia kerja, 
-                            dengan kekuatan utama di bidang Ekonomi Manajemen serta mempunyai kemampuan di bidang komunikasi, 
-                            public speaking dan dikenal mudah beradaptasi, mampu menyelesaikan masalah secara efektif, 
-                            serta memiliki jiwa kepemimpinan yang baik.
-                        </p>
-                    </div>
-                    
-                    <div class="about-journey">
-                        <h4>Perjalanan Profesional</h4>
-                        <p>
-                            Perjalanan saya berawal dari ketertarikan yang kuat pada dunia komunikasi. 
-                            Ketertarikan ini mendorong saya untuk memahami bagaimana pesan dapat disampaikan secara
-                             efektif melalui berbagai media. Seiring waktu, saya memperdalam keahlian dalam 
-                             public speaking, strategi komunikasi, dan pengemasan konten. Untuk memperkuat dampak 
-                             komunikasi di era digital, saya juga mengembangkan kemampuan dalam UI/UX Design dan 
-                             mempelajari dasar-dasar programming guna mendukung penyampaian pesan secara visual dan
-                              interaktif. Saat ini, saya berkarier sebagai Sekretaris Direktur Utama JTTC dan freelancer dan konsultan digital, membantu
-                               startup dan perusahaan menyusun strategi komunikasi yang kuat dan relevan untuk menjangkau
-                                client mereka secara efektif dan luas.
-                        </p>
-                    </div>
-
-                    <div class="about-philosophy">
-                        <h4>Filosofi Kerja</h4>
-                        <p>
-                            Saya percaya bahwa kemampuan yang baik bukan hanya tentang estetika, tetapi juga tentang 
-                            memecahkan masalah nyata. Setiap proyek yang saya kerjakan dimulai dengan pemahaman mendalam 
-                            tentang pengguna dan tujuan bisnis, kemudian diterjemahkan menjadi solusi yang intuitif dan efektif.
-                        </p>
-                    </div>
-
-                    <div class="skills-section">
-                        <h4>Keahlian Utama</h4>
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h5><i class="fas fa-paint-brush"></i> Design</h5>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Komunikasi</span>
-                                    <span class="skill-tag">Kajian Penelitian</span>
-                                    <span class="skill-tag">Bahasa Inggris (Kemahiran Kerja Menengah). </span>
-                                    <span class="skill-tag">Ms. Excel (Spesialisasi Keterampilan Excel untuk Bisnis oleh Universitas Macquarie di Coursera)</span>
-                                    <span class="skill-tag">Microsoft Office</span>
-                                    <span class="skill-tag">Data Analis</span>
-                                    <span class="skill-tag">Python</span>
-                                    <span class="skill-tag">Problem Solving</span>
-                                    <span class="skill-tag">CRM</span>
-                                    <span class="skill-tag">Digital Marketing</span>
-                                    <span class="skill-tag">Data analytics</span>
-                                    <span class="skill-tag">Business & Market Analysis</span>
-                                    <span class="skill-tag">Content Creation & Thought Leadership</span>
-                                    <span class="skill-tag">Finance Management Plan</span>
-                                    <span class="skill-tag">Ekonomi Mikro</span>
-                                    <span class="skill-tag">Corel Draw</span>
-                                </div>
-                            </div>
-                            <div class="skill-category">
-                                <h5><i class="fas fa-code"></i> Development</h5>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">HTML</span>
-                                    <span class="skill-tag">Node.js</span>
-                                    <span class="skill-tag">CSS</span>
-                                    <span class="skill-tag">JavaScript</span>
-                                    <span class="skill-tag">Next.js</span>
-                                    <span class="skill-tag">Github</span>
-                                </div>
-                            </div>
-                            <div class="skill-category">
-                                <h5><i class="fas fa-chart-line"></i> Strategy</h5>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Digital Strategy</span>
-                                    <span class="skill-tag">User Research</span>
-                                    <span class="skill-tag">Product Management</span>
-                                    <span class="skill-tag">Brand Strategy</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-sidebar">
-                    <div class="about-image">
-                        <img src="images/about/about-photo.jpg" alt="Wahyu Yoga Pratama working" class="about-photo">
-                    </div>
-                    
-                    <div class="about-highlights">
-                        <h4>Pencapaian</h4>
-                        <div class="highlight-item">
-                            <i class="fas fa-trophy"></i>
-                            <div>
-                                <h5>Mas Mbak Jawa Tengah 2024</h5>
-                                <p>Mas Jawa Tengah 2024</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-star"></i>
-                            <div>
-                                <h5>Duta Wisata Kabupaten Pati 2019</h5>
-                                <p>Juara 2 Duta Wisata Kabupaten Pati 2019</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div>
-                                <h5>Duta Pelajar Jawa Tengah 2019</h5>
-                                <p>Top 3 Duta Pelajar Jawa Tengah</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="about-stats">
-                        <div class="stat-card">
-                            <div class="stat-icon">
-                                <i class="fas fa-project-diagram"></i>
-                            </div>
-                            <div class="stat-info">
-                                <span class="stat-number">50+</span>
-                                <span class="stat-label">Proyek Selesai</span>
-                            </div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="stat-info">
-                                <span class="stat-number">5+</span>
-                                <span class="stat-label">Tahun Pengalaman</span>
-                            </div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="stat-info">
-                                <span class="stat-number">30+</span>
-                                <span class="stat-label">Klien Puas</span>
-                            </div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <div class="stat-info">
-                                <span class="stat-number">15+</span>
-                                <span class="stat-label">Negara</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tentang Saya</span>
+          <h2 class="section-title">Passion untuk Inovasi Business</h2>
+          <p class="section-subtitle">
+            Menggabungkan kreativitas business dengan teknologi untuk
+            menciptakan solusi yang bermakna
+          </p>
         </div>
+        <div class="about-content">
+          <div class="about-text">
+            <div class="about-intro">
+              <h3>Halo! Saya Wahyu Yoga Pratama</h3>
+              <p>
+                Saya adalah individu yang memiliki motivasi tinggi dalam dunia
+                kerja, dengan kekuatan utama di bidang Ekonomi Manajemen serta
+                mempunyai kemampuan di bidang komunikasi, public speaking dan
+                dikenal mudah beradaptasi, mampu menyelesaikan masalah secara
+                efektif, serta memiliki jiwa kepemimpinan yang baik.
+              </p>
+            </div>
+
+            <div class="about-journey">
+              <h4>Perjalanan Profesional</h4>
+              <p>
+                Perjalanan saya berawal dari ketertarikan yang kuat pada dunia
+                komunikasi. Ketertarikan ini mendorong saya untuk memahami
+                bagaimana pesan dapat disampaikan secara efektif melalui
+                berbagai media. Seiring waktu, saya memperdalam keahlian dalam
+                public speaking, strategi komunikasi, dan pengemasan konten.
+                Untuk memperkuat dampak komunikasi di era digital, saya juga
+                mengembangkan kemampuan dalam UI/UX Design dan mempelajari
+                dasar-dasar programming guna mendukung penyampaian pesan secara
+                visual dan interaktif. Saat ini, saya berkarier sebagai
+                Sekretaris Direktur Utama JTTC dan freelancer dan konsultan
+                digital, membantu startup dan perusahaan menyusun strategi
+                komunikasi yang kuat dan relevan untuk menjangkau client mereka
+                secara efektif dan luas.
+              </p>
+            </div>
+
+            <div class="about-philosophy">
+              <h4>Filosofi Kerja</h4>
+              <p>
+                Saya percaya bahwa kemampuan yang baik bukan hanya tentang
+                estetika, tetapi juga tentang memecahkan masalah nyata. Setiap
+                proyek yang saya kerjakan dimulai dengan pemahaman mendalam
+                tentang pengguna dan tujuan bisnis, kemudian diterjemahkan
+                menjadi solusi yang intuitif dan efektif.
+              </p>
+            </div>
+
+            <div class="skills-section">
+              <h4>Keahlian Utama</h4>
+              <div class="skills-grid">
+                <div class="skill-category">
+                  <h5><i class="fas fa-paint-brush"></i> Design</h5>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Komunikasi</span>
+                    <span class="skill-tag">Kajian Penelitian</span>
+                    <span class="skill-tag"
+                      >Bahasa Inggris (Kemahiran Kerja Menengah).
+                    </span>
+                    <span class="skill-tag"
+                      >Ms. Excel (Spesialisasi Keterampilan Excel untuk Bisnis
+                      oleh Universitas Macquarie di Coursera)</span
+                    >
+                    <span class="skill-tag">Microsoft Office</span>
+                    <span class="skill-tag">Data Analis</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">CRM</span>
+                    <span class="skill-tag">Digital Marketing</span>
+                    <span class="skill-tag">Data analytics</span>
+                    <span class="skill-tag">Business & Market Analysis</span>
+                    <span class="skill-tag"
+                      >Content Creation & Thought Leadership</span
+                    >
+                    <span class="skill-tag">Finance Management Plan</span>
+                    <span class="skill-tag">Ekonomi Mikro</span>
+                    <span class="skill-tag">Corel Draw</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h5><i class="fas fa-code"></i> Development</h5>
+                  <div class="skill-tags">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Next.js</span>
+                    <span class="skill-tag">Github</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h5><i class="fas fa-chart-line"></i> Strategy</h5>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Digital Strategy</span>
+                    <span class="skill-tag">User Research</span>
+                    <span class="skill-tag">Product Management</span>
+                    <span class="skill-tag">Brand Strategy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-sidebar">
+            <div class="about-image">
+              <img
+                src="images/about/about-photo.jpg"
+                alt="Wahyu Yoga Pratama working"
+                class="about-photo"
+              />
+            </div>
+
+            <div class="about-highlights">
+              <h4>Pencapaian</h4>
+              <div class="highlight-item">
+                <i class="fas fa-trophy"></i>
+                <div>
+                  <h5>Mas Mbak Jawa Tengah 2024</h5>
+                  <p>Mas Jawa Tengah 2024</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-star"></i>
+                <div>
+                  <h5>Duta Wisata Kabupaten Pati 2019</h5>
+                  <p>Juara 2 Duta Wisata Kabupaten Pati 2019</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-graduation-cap"></i>
+                <div>
+                  <h5>Duta Pelajar Jawa Tengah 2019</h5>
+                  <p>Top 3 Duta Pelajar Jawa Tengah</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-stats">
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-number">50+</span>
+                  <span class="stat-label">Proyek Selesai</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-number">5+</span>
+                  <span class="stat-label">Tahun Pengalaman</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-number">30+</span>
+                  <span class="stat-label">Klien Puas</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-globe"></i>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-number">15+</span>
+                  <span class="stat-label">Negara</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Portfolio</span>
-                <h2 class="section-title">Karya Terpilih</h2>
-                <p class="section-subtitle">
-                    Koleksi proyek yang menunjukkan kemampuan saya
-                </p>
-            </div>
-            
-            <div class="portfolio-filter">
-                <button class="filter-btn active" data-filter="all">Semua</button>
-                <button class="filter-btn" data-filter="uiux">Pengalaman Kerja</button>
-                <button class="filter-btn" data-filter="web">Kemampuan</button>
-                <button class="filter-btn" data-filter="mobile">Prestasi</button>
-                <button class="filter-btn" data-filter="branding">Branding</button>
-            </div>
-            
-            <div class="portfolio-grid">
-                <!-- Project 1: E-Commerce Platform -->
-                <div class="portfolio-item featured" data-category="web uiux">
-                    <div class="portfolio-image">
-                        <img src="images/portfolio/ecommerce-platform-induk.png" alt="E-Commerce Platform Design" class="project-image">
-                        <div class="portfolio-overlay">
-                            <div class="project-info">
-                                <span class="project-category">UI/UX Design • Web Development</span>
-                                <h4>Komunikasi - Publik Speaking </h4>
-                                <p>Platform e-commerce modern dengan fokus pada user experience yang intuitif dan conversion rate optimization.</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">React</span>
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">MongoDB</span>
-                                    <span class="tech-tag">Figma</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" class="project-link" data-project="ecommerce">
-                                        <i class="fas fa-eye"></i> Lihat Detail
-                                    </a>
-                                    <a href="#" class="project-link external">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: Kajian Penelitian  -->
-                <div class="portfolio-item" data-category="mobile uiux">
-                    <div class="portfolio-image">
-                        <img src="images/portfolio/Duwis_Pati.jpg" alt="Mobile Banking App" class="project-image">
-                        <div class="portfolio-overlay">
-                            <div class="project-info">
-                                <span class="project-category">Prestasi Kabupaten</span>
-                                <h4>Duta Wisata Kabupaten Pati</h4>
-                                <p>Juara 2 Duta Wisata Kabupaten Pati</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">Publik Speaking</span>
-                                    <span class="tech-tag">Brand Ambassador</span>
-                                    <span class="tech-tag">Brand, Beauty, and Behavior</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" class="project-link" data-project="banking">
-                                        <i class="fas fa-eye"></i> Lihat Detail
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: SaaS Dashboard -->
-                <div class="portfolio-item" data-category="web uiux">
-                    <div class="portfolio-image">
-                        <img src="images/portfolio/Membangunrelasi1.jpg" alt="SaaS Dashboard" class="project-image">
-                        <div class="portfolio-overlay">
-                            <div class="project-info">
-                                <span class="project-category">Web Development • UI/UX Design</span>
-                                <h4>Membangun Relasi dalam Business</h4>
-                                <p>Menjalin Koneksi, Meningkatkan Reputasi: Fondasi Relasi dalam Dunia Bisnis</p>
-                                <div class="project-tech">
-
-                                    <span class="tech-tag">Emotional Intelligence</span>
-                                    <span class="tech-tag">Komunikasi - Networking</span>
-                                    <span class="tech-tag">Manajemen Konflik</span>
-                                    <span class="tech-tag">Negosiasi dan Diplomasi</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" class="project-link" data-project="dashboard">
-                                        <i class="fas fa-eye"></i> Lihat Detail
-                                    </a>
-                                    <a href="#" class="project-link external">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4: Brand Identity -->
-                <div class="portfolio-item" data-category="branding">
-                    <div class="portfolio-image">
-                        <img src="images/portfolio/brand-identity.jpg" alt="Brand Identity Design" class="project-image">
-                        <div class="portfolio-overlay">
-                            <div class="project-info">
-                                <span class="project-category">Branding • Visual Identity</span>
-                                <h4>kemampuan Diri</h4>
-                                <p>Identitas visual lengkap untuk startup teknologi hijau, termasuk logo, color palette, dan brand guidelines.</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">Illustrator</span>
-                                    <span class="tech-tag">Photoshop</span>
-                                    <span class="tech-tag">InDesign</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" class="project-link" data-project="branding">
-                                        <i class="fas fa-eye"></i> Lihat Detail
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5: Learning Management System -->
-                <div class="portfolio-item" data-category="web uiux">
-                    <div class="portfolio-image">
-                        <img src="images/portfolio/Marketing.png" alt="Learning Management System" class="project-image">
-                        <div class="portfolio-overlay">
-                            <div class="project-info">
-                                <span class="project-category">Web Development • UI/UX Design</span>
-                                <h4> Marketing - Customer Relationship Management</h4>
-                                <p>Tugas Marketing CRM (Customer Relationship Management) berfokus pada membangun dan menjaga hubungan jangka
-                                     panjang dengan pelanggan untuk meningkatkan loyalitas dan nilai bisnis</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">Courtesy</span>
-                                    <span class="tech-tag">Sales Plan</span>
-                                    <span class="tech-tag">Digital Markting</span>
-                                    <span class="tech-tag">Statistik</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" class="project-link" data-project="lms">
-                                        <i class="fas fa-eye"></i> Lihat Detail
-                                    </a>
-                                    <a href="#" class="project-link external">
-                                        <i class="fas fa-external-link-alt"></i> 
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6: Food Delivery App -->
-                <div class="portfolio-item" data-category="mobile uiux">
-                    <div class="portfolio-image">
-                        <img src="images/portfolio/MasMba_Jateng.jpg" alt="Food Delivery App" class="project-image">
-                        <div class="portfolio-overlay">
-                            <div class="project-info">
-                                <span class="project-category">Prestasi Provinsi</span>
-                                <h4>Mas Mbak Jawa Tengah </h4>
-                                <p> Ajang Pemilihan Mas Mbak Jawa Tengah </p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">Pemuda Pelopor Pariwisata </span>
-                                    <span class="tech-tag">Ethics & Personality</span>
-                                    <span class="tech-tag">Problem Solving & Critical Thinking</span>
-                                    <span class="tech-tag">Social Awareness</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" class="project-link" data-project="fooddelivery">
-                                        <i class="fas fa-eye"></i> Lihat Detail
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portfolio-cta">
-                <p>Tertarik dengan karya saya? Mari diskusikan proyek Anda!</p>
-                <a href="#contact" class="btn btn-primary">
-                    <i class="fas fa-comments"></i>
-                    Mulai Diskusi
-                </a>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Karya Terpilih</h2>
+          <p class="section-subtitle">
+            Koleksi proyek yang menunjukkan kemampuan saya
+          </p>
         </div>
-    </section>
 
- 
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Blog</span>
-                <h2 class="section-title">Insights & Pemikiran</h2>
-                <p class="section-subtitle">
-                    Artikel terbaru tentang design, development, dan teknologi
-                </p>
-            </div>
-            
-            <div class="blog-grid">
-                <article class="blog-card featured">
-                    <div class="blog-image">
-                        <img src="images/blog/foto_2.JPG" alt="UI Design Trends 2024" class="blog-photo">
-                        <div class="blog-category">Design</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                15 Desember 2024
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                8 min read
-                            </span>
-                        </div>
-                        <h3>Tren UI Design 2024: Apa yang Perlu Diketahui Designer</h3>
-                        <p>
-                            Eksplorasi mendalam tentang tren terbaru dalam UI design, mulai dari glassmorphism, 
-                            neumorphism, hingga penggunaan AI dalam design process. Pelajari bagaimana tren ini 
-                            dapat meningkatkan user experience.
-                        </p>
-                        <div class="blog-tags">
-                            <span class="blog-tag">UI Design</span>
-                            <span class="blog-tag">Trends</span>
-                            <span class="blog-tag">UX</span>
-                        </div>
-                        <a href="#" class="blog-link">
-                            Baca Selengkapnya
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="images/blog/react-performance.jpg" alt="React Performance Optimization" class="blog-photo">
-                        <div class="blog-category">Development</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                10 Desember 2024
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                12 min read
-                            </span>
-                        </div>
-                        <h3>Optimasi Performa React: Tips dan Teknik Terbaru</h3>
-                        <p>
-                            Panduan komprehensif untuk mengoptimalkan performa aplikasi React. Mulai dari code splitting, 
-                            lazy loading, hingga penggunaan React.memo dan useMemo untuk aplikasi yang lebih cepat.
-                        </p>
-                        <div class="blog-tags">
-                            <span class="blog-tag">React</span>
-                            <span class="blog-tag">Performance</span>
-                            <span class="blog-tag">JavaScript</span>
-                        </div>
-                        <a href="#" class="blog-link">
-                            Baca Selengkapnya
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="images/blog/startup-strategy.jpg" alt="Digital Strategy for Startups" class="blog-photo">
-                        <div class="blog-category">Strategy</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                5 Desember 2024
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                10 min read
-                            </span>
-                        </div>
-                        <h3>Strategi Digital untuk Startup: Dari MVP hingga Scale</h3>
-                        <p>
-                            Bagaimana startup dapat memanfaatkan teknologi digital untuk growth yang sustainable. 
-                            Membahas strategi product development, user acquisition, dan scaling yang efektif.
-                        </p>
-                        <div class="blog-tags">
-                            <span class="blog-tag">Startup</span>
-                            <span class="blog-tag">Strategy</span>
-                            <span class="blog-tag">Growth</span>
-                        </div>
-                        <a href="#" class="blog-link">
-                            Baca Selengkapnya
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="blog-cta">
-                <p>Ingin membaca lebih banyak artikel?</p>
-                <a href="#" class="btn btn-outline">
-                    <i class="fas fa-rss"></i>
-                    Lihat Semua Artikel
-                </a>
-            </div>
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="uiux">
+            Pengalaman Kerja
+          </button>
+          <button class="filter-btn" data-filter="web">Kemampuan</button>
+          <button class="filter-btn" data-filter="mobile">Prestasi</button>
+          <button class="filter-btn" data-filter="branding">Branding</button>
         </div>
-    </section>
+
+        <div class="portfolio-grid">
+          <!-- Project 1: E-Commerce Platform -->
+          <div class="portfolio-item featured" data-category="web uiux">
+            <div class="portfolio-image">
+              <img
+                src="images/portfolio/ecommerce-platform-induk.png"
+                alt="E-Commerce Platform Design"
+                class="project-image"
+              />
+              <div class="portfolio-overlay">
+                <div class="project-info">
+                  <span class="project-category"
+                    >UI/UX Design • Web Development</span
+                  >
+                  <h4>Komunikasi - Publik Speaking</h4>
+                  <p>
+                    Platform e-commerce modern dengan fokus pada user experience
+                    yang intuitif dan conversion rate optimization.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Figma</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="#" class="project-link" data-project="ecommerce">
+                      <i class="fas fa-eye"></i> Lihat Detail
+                    </a>
+                    <a href="#" class="project-link external">
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Kajian Penelitian  -->
+          <div class="portfolio-item" data-category="mobile uiux">
+            <div class="portfolio-image">
+              <img
+                src="images/portfolio/Duwis_Pati.jpg"
+                alt="Mobile Banking App"
+                class="project-image"
+              />
+              <div class="portfolio-overlay">
+                <div class="project-info">
+                  <span class="project-category">Prestasi Kabupaten</span>
+                  <h4>Duta Wisata Kabupaten Pati</h4>
+                  <p>Juara 2 Duta Wisata Kabupaten Pati</p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Publik Speaking</span>
+                    <span class="tech-tag">Brand Ambassador</span>
+                    <span class="tech-tag">Brand, Beauty, and Behavior</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="#" class="project-link" data-project="banking">
+                      <i class="fas fa-eye"></i> Lihat Detail
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: SaaS Dashboard -->
+          <div class="portfolio-item" data-category="web uiux">
+            <div class="portfolio-image">
+              <img
+                src="images/portfolio/Membangunrelasi1.jpg"
+                alt="SaaS Dashboard"
+                class="project-image"
+              />
+              <div class="portfolio-overlay">
+                <div class="project-info">
+                  <span class="project-category"
+                    >Web Development • UI/UX Design</span
+                  >
+                  <h4>Membangun Relasi dalam Business</h4>
+                  <p>
+                    Menjalin Koneksi, Meningkatkan Reputasi: Fondasi Relasi
+                    dalam Dunia Bisnis
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Emotional Intelligence</span>
+                    <span class="tech-tag">Komunikasi - Networking</span>
+                    <span class="tech-tag">Manajemen Konflik</span>
+                    <span class="tech-tag">Negosiasi dan Diplomasi</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="#" class="project-link" data-project="dashboard">
+                      <i class="fas fa-eye"></i> Lihat Detail
+                    </a>
+                    <a href="#" class="project-link external">
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Brand Identity -->
+          <div class="portfolio-item" data-category="branding">
+            <div class="portfolio-image">
+              <img
+                src="images/portfolio/brand-identity.jpg"
+                alt="Brand Identity Design"
+                class="project-image"
+              />
+              <div class="portfolio-overlay">
+                <div class="project-info">
+                  <span class="project-category"
+                    >Branding • Visual Identity</span
+                  >
+                  <h4>kemampuan Diri</h4>
+                  <p>
+                    Identitas visual lengkap untuk startup teknologi hijau,
+                    termasuk logo, color palette, dan brand guidelines.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Illustrator</span>
+                    <span class="tech-tag">Photoshop</span>
+                    <span class="tech-tag">InDesign</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="#" class="project-link" data-project="branding">
+                      <i class="fas fa-eye"></i> Lihat Detail
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Learning Management System -->
+          <div class="portfolio-item" data-category="web uiux">
+            <div class="portfolio-image">
+              <img
+                src="images/portfolio/Marketing.png"
+                alt="Learning Management System"
+                class="project-image"
+              />
+              <div class="portfolio-overlay">
+                <div class="project-info">
+                  <span class="project-category"
+                    >Web Development • UI/UX Design</span
+                  >
+                  <h4>Marketing - Customer Relationship Management</h4>
+                  <p>
+                    Tugas Marketing CRM (Customer Relationship Management)
+                    berfokus pada membangun dan menjaga hubungan jangka panjang
+                    dengan pelanggan untuk meningkatkan loyalitas dan nilai
+                    bisnis
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Courtesy</span>
+                    <span class="tech-tag">Sales Plan</span>
+                    <span class="tech-tag">Digital Markting</span>
+                    <span class="tech-tag">Statistik</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="#" class="project-link" data-project="lms">
+                      <i class="fas fa-eye"></i> Lihat Detail
+                    </a>
+                    <a href="#" class="project-link external">
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Food Delivery App -->
+          <div class="portfolio-item" data-category="mobile uiux">
+            <div class="portfolio-image">
+              <img
+                src="images/portfolio/MasMba_Jateng.jpg"
+                alt="Food Delivery App"
+                class="project-image"
+              />
+              <div class="portfolio-overlay">
+                <div class="project-info">
+                  <span class="project-category">Prestasi Provinsi</span>
+                  <h4>Mas Mbak Jawa Tengah</h4>
+                  <p>Ajang Pemilihan Mas Mbak Jawa Tengah</p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Pemuda Pelopor Pariwisata </span>
+                    <span class="tech-tag">Ethics & Personality</span>
+                    <span class="tech-tag"
+                      >Problem Solving & Critical Thinking</span
+                    >
+                    <span class="tech-tag">Social Awareness</span>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="#"
+                      class="project-link"
+                      data-project="fooddelivery"
+                    >
+                      <i class="fas fa-eye"></i> Lihat Detail
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Kontak</span>
-                <h2 class="section-title">Mari Berkolaborasi</h2>
-                <p class="section-subtitle">
-                    Punya proyek menarik? Mari diskusikan bagaimana saya bisa membantu mewujudkannya
-                </p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-intro">
-                        <h3>Mari Mulai Percakapan</h3>
-                        <p>
-                            Saya selalu terbuka untuk proyek baru, kolaborasi kreatif, atau sekadar diskusi 
-                            tentang teknologi dan design. Jangan ragu untuk menghubungi saya!
-                        </p>
-                    </div>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="method-info">
-                                <h4>Email</h4>
-                                <p>wahyuyoga23Oke@gmail.com</p>
-                                <span class="method-note">Respon dalam 24 jam</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="method-info">
-                                <h4>WhatsApp</h4>
-                                <p><a href="https://wa.me/6282229166430"
-                                    target="_blank">+62 822 29166430</a></p>
-                                <span class="method-note">Tersedia 09:00 - 18:00 WIB</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="method-info">
-                                <h4>Lokasi</h4>
-                                <p>Jakarta, Indonesia</p>
-                                <span class="method-note">Tersedia untuk remote work</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <h4>Ikuti Saya</h4>
-                        <div class="social-grid">
-                            <a href="#" class="social-link linkedin">
-                                <i class="fab fa-linkedin-in"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                            <a href="#" class="social-link github">
-                                <i class="fab fa-github"></i>
-                                <span>GitHub</span>
-                            </a>
-                            <a href="#" class="social-link dribbble">
-                                <i class="fab fa-dribbble"></i>
-                                <span>Dribbble</span>
-                            </a>
-                            <a href="#" class="social-link behance">
-                                <i class="fab fa-behance"></i>
-                                <span>Behance</span>
-                            </a>
-                            <a href="#" class="social-link instagram">
-                                <i class="fab fa-instagram"></i>
-                                <span>Instagram</span>
-                            </a>
-                            <a href="#" class="social-link twitter">
-                                <i class="fab fa-twitter"></i>
-                                <span>Twitter</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <form class="contact-form" id="contact-form">
-                    <div class="form-header">
-                        <h3>Kirim Pesan</h3>
-                        <p>Ceritakan tentang proyek Anda</p>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Nama Lengkap *</label>
-                            <input type="text" id="name" name="name" required>
-                            <span class="form-error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                            <span class="form-error"></span>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="company">Perusahaan</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        <div class="form-group">
-                            <label for="budget">Budget Range</label>
-                            <select id="budget" name="budget">
-                                <option value="">Pilih budget range</option>
-                                <option value="under-5m">< Rp 5 Juta</option>
-                                <option value="5m-15m">Rp 5 - 15 Juta</option>
-                                <option value="15m-30m">Rp 15 - 30 Juta</option>
-                                <option value="30m-50m">Rp 30 - 50 Juta</option>
-                                <option value="above-50m">> Rp 50 Juta</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="project-type">Jenis Proyek *</label>
-                        <div class="checkbox-group">
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="project-type" value="uiux">
-                                <span class="checkmark"></span>
-                                UI/UX Design
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="project-type" value="web">
-                                <span class="checkmark"></span>
-                                Web Development
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="project-type" value="mobile">
-                                <span class="checkmark"></span>
-                                Mobile App
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="project-type" value="consulting">
-                                <span class="checkmark"></span>
-                                Consulting
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Ceritakan tentang proyek Anda *</label>
-                        <textarea id="message" name="message" rows="6" placeholder="Jelaskan detail proyek, tujuan, timeline, dan hal lain yang perlu saya ketahui..." required></textarea>
-                        <span class="form-error"></span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="checkbox-item privacy">
-                            <input type="checkbox" name="privacy" required>
-                            <span class="checkmark"></span>
-                            Saya setuju dengan <a href="#">kebijakan privasi</a> dan <a href="#">syarat & ketentuan</a>
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-submit">
-                        <span class="btn-text">
-                            <i class="fas fa-paper-plane"></i>
-                            Kirim Pesan
-                        </span>
-                        <span class="btn-loading">
-                            <i class="fas fa-spinner fa-spin"></i>
-                            Mengirim...
-                        </span>
-                    </button>
-                </form>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Kontak</span>
+          <h2 class="section-title">Mari Berkolaborasi</h2>
+          <p class="section-subtitle">
+            Punya proyek menarik? Mari diskusikan bagaimana saya bisa membantu
+            mewujudkannya
+          </p>
         </div>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-intro">
+              <h3>Mari Mulai Percakapan</h3>
+              <p>
+                Saya selalu terbuka untuk proyek baru, kolaborasi kreatif, atau
+                sekadar diskusi tentang teknologi dan design. Jangan ragu untuk
+                menghubungi saya!
+              </p>
+            </div>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="method-info">
+                  <h4>Email</h4>
+                  <p>wahyuyoga23Oke@gmail.com</p>
+                  <span class="method-note">Respon dalam 24 jam</span>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="method-info">
+                  <h4>WhatsApp</h4>
+                  <p>
+                    <a href="https://wa.me/6282229166430" target="_blank"
+                      >+62 822 29166430</a
+                    >
+                  </p>
+                  <span class="method-note">Tersedia 09:00 - 18:00 WIB</span>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="method-info">
+                  <h4>Lokasi</h4>
+                  <p>Jakarta, Indonesia</p>
+                  <span class="method-note">Tersedia untuk remote work</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <h4>Ikuti Saya</h4>
+              <div class="social-grid">
+                <a href="#" class="social-link linkedin">
+                  <i class="fab fa-linkedin-in"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="#" class="social-link github">
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="#" class="social-link dribbble">
+                  <i class="fab fa-dribbble"></i>
+                  <span>Dribbble</span>
+                </a>
+                <a href="#" class="social-link behance">
+                  <i class="fab fa-behance"></i>
+                  <span>Behance</span>
+                </a>
+                <a href="#" class="social-link instagram">
+                  <i class="fab fa-instagram"></i>
+                  <span>Instagram</span>
+                </a>
+                <a href="#" class="social-link twitter">
+                  <i class="fab fa-twitter"></i>
+                  <span>Twitter</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+         
+
+
+            <div class="form-group">
+              <label for="message">Ceritakan tentang proyek Anda *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Jelaskan detail proyek, tujuan, timeline, dan hal lain yang perlu saya ketahui..."
+                required
+              ></textarea>
+              <span class="form-error"></span>
+            </div>
+
+          
+          </form>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-main">
-                    <div class="footer-brand">
-                        <div class="footer-logo">
-                            <span class="logo-text">Wahyu</span>
-                            <span class="logo-accent">YP</span>
-                        </div>
-                        <p class="footer-description">
-                            Digital Innovator & Creative Designer yang berdedikasi untuk menciptakan 
-                            pengalaman digital yang luar biasa dan berdampak positif.
-                        </p>
-                        <div class="footer-social">
-                            <a href="#" class="social-link" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Dribbble">
-                                <i class="fab fa-dribbble"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Behance">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-section">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#blog">Blog</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4>Demo</h4>
-                        <ul>
-                            <li><a href="#services">UI/UX Design</a></li>
-                            <li><a href="#services">Web Development</a></li>
-                            <li><a href="#services">Mobile App</a></li>
-                            <li><a href="#services">Digital Strategy</a></li>
-                            <li><a href="#services">MVP Development</a></li>
-                            <li><a href="#services">Training</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4>Contact Info</h4>
-                        <ul class="contact-info">
-                            <li>
-                                <i class="fas fa-envelope"></i>
-                                wahyuyoga23Oke@gmail.com
-                            </li>
-                            <li>
-                                <i class="fas fa-phone"></i>
-                                +62 812-3456-7890
-                            </li>
-                            <li>
-                                <i class="fas fa-map-marker-alt"></i>
-                                Jakarta, Indonesia
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2024 Wahyu Yoga Pratama. All rights reserved.</p>
-                    <div class="footer-bottom-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Sitemap</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <!-- Back to Top Button -->
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
+      <i class="fas fa-chevron-up"></i>
     </button>
 
     <!-- JavaScript Files -->
@@ -900,6 +717,5 @@
     <script src="js/portfolio.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/themes.js"></script>
-</body>
+  </body>
 </html>
-

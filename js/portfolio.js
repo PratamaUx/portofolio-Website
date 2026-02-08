@@ -135,16 +135,16 @@ class PortfolioManager {
         // Project data - in a real application, this would come from an API or database
         const projects = {
             ecommerce: {
-                title: 'ShopEase - E-Commerce Platform',
-                category: 'UI/UX Design • Web Development',
-                description: 'Platform e-commerce modern dengan fokus pada user experience yang intuitif dan conversion rate optimization. Dibangun dengan teknologi terdepan untuk performa optimal.',
-                challenge: 'Menciptakan platform e-commerce yang dapat bersaing dengan marketplace besar sambil memberikan pengalaman yang personal dan mudah digunakan.',
-                solution: 'Mengembangkan sistem design yang konsisten, implementasi fitur pencarian yang powerful, dan optimasi checkout process untuk meningkatkan conversion rate.',
+                title: 'About Communication Skills',
+                category: 'Publik Speaking',
+                description: 'Define a clear professional identity based on strengths, experience, and career goals.',
+                challenge: 'Differences in perspective and interests often make strategic messages difficult to fully understand by various parties.',
+                solution: 'I deliver information in a clear, structured, and tailored manner to the audience of leaders, teams, and partners—combining data, context, and easy-to-understand language.',
                 results: [
-                    'Peningkatan conversion rate sebesar 40%',
-                    'Waktu loading halaman < 2 detik',
-                    'User satisfaction score 4.8/5',
-                    'Mobile traffic meningkat 60%'
+                    'The decision-making process has become faster',
+                    'Miscommunication has been significantly reduced',
+                    'Working relationships with stakeholders have become more solid',
+                    'Broader relationships have been established'
                 ],
                 technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'AWS', 'Figma'],
                 images: [

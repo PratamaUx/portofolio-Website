@@ -148,9 +148,9 @@ class PortfolioManager {
                 ],
                 technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'AWS', 'Figma'],
                 images: [
-                    'images/portfolio/ecommerce-1.jpg',
-                    'images/portfolio/ecommerce-2.jpg',
-                    'images/portfolio/ecommerce-3.jpg'
+                '/images/portfolio/MC.jpeg',
+                '/images/portfolio/Narasumber.jpeg',
+                '/images/portfolio/MC_Wisuda.jpeg',
                 ],
                 liveUrl: 'https://shopease-demo.com',
                 githubUrl: 'https://github.com/wahyu/shopease',

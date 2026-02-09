@@ -179,9 +179,9 @@ class PortfolioManager {
                 client: 'FinTech Solutions'
             },
             dashboard: {
-                title: 'Membangun Relasi dalam Business',
-                category: 'Sekretaris Direksi',
-                description: 'Relasi yang kuat adalah kunci keberhasilan bisnis. Komunikasi, kepercayaan, dan kolaborasi jadi fondasinya.',
+                title: 'Work Experience',
+                category: 'Employment',
+                description: 'Secretary to the Board of Directors of PT. Jogja Tama Tri Cita and Administrative Staff of the Pati Regency Health Office',
                 challenge: 'Kurangnya Kepercayaan di Awal Kerja Sama. Komunikasi yang Kurang Efektif',
                 solution: ' Bangun Trust dengan Konsistensi & Transparansi,Kembangkan Komunikasi Dua Arah yang Aktif,Perluas Jaringan secara Aktif.',
                 results: [

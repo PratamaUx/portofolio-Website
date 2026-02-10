@@ -149,7 +149,7 @@ class PortfolioManager {
                 technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'AWS', 'Figma'],
                 images: [
                 'images/portfolio/MC_Wisuda.jpeg',
-                'images/portfolio/Narasumber.jpeg',
+                'images/portfolio/Wahyu_Narasumber.jpeg',
                 'images/portfolio/MC.jpeg',
                 ],
                 liveUrl: 'https://shopease-demo.com',

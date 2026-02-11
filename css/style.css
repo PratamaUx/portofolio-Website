@@ -1348,23 +1348,42 @@ section {
 }
 
 .contact-methods {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xl);
-}
+  display: grid;
+   grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
 
+  justify-items: stretch; /* pastikan card ngisi kolom */
+}
 .contact-method {
+  width: 100%;
+ background: #445065;
+  padding: 20px 22px;
+  border-radius: 14px;
+
   display: flex;
   align-items: center;
-  gap: var(--spacing-lg);
-  padding: var(--spacing-lg);
-  background: var(--bg-secondary);
-  border-radius: var(--radius-lg);
-  transition: transform var(--transition-normal);
-}
+  gap: 16px;
+
+  transition: 0.3s ease;
+  flex: 1;
+  min-width: 320px;   /* ⬅ taruh di sini */
+  }
 
 .contact-method:hover {
-  transform: translateX(10px);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+.method-info p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.method-info p {
+  font-size: 14px;
+  word-spacing: 1px;
+}
+.contact-method {
+  min-height: 90px;
 }
 
 .method-icon {
@@ -1397,14 +1416,17 @@ section {
 }
 
 .social-links h4 {
-  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  margin-top: 40px;   /* spasi dari card atas */
+  margin-bottom: 24px; /* spasi ke social icons */
   color: var(--text-primary);
 }
 
 .social-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-md);
+   grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 32px;
+
 }
 
 .social-link {
@@ -1440,6 +1462,9 @@ section {
   padding: var(--spacing-2xl);
   border-radius: var(--radius-xl);
   box-shadow: 0 20px 40px var(--shadow-medium);
+
+  max-width: 1200px;
+  margin: 60px auto;
 }
 
 .form-header {

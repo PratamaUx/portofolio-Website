@@ -5,7 +5,7 @@ class PortfolioManager {
     constructor() {
         this.filterButtons = document.querySelectorAll('.filter-btn');
         this.portfolioItems = document.querySelectorAll('.portfolio-item');
-        this.currentFilter = 'all';
+        this.currentFilter = null;
         this.isAnimating = false;
         
         this.init();
@@ -70,11 +70,23 @@ class PortfolioManager {
         this.portfolioItems.forEach(item => {
             item.classList.add('filtering');
         });
-        
+        this.allCounter = 0;
+
         setTimeout(() => {
             this.portfolioItems.forEach(item => {
                 const categories = item.getAttribute('data-category').split(' ');
-                const shouldShow = filter === 'all' || categories.includes(filter);
+                let shouldShow = false;
+
+if (filter === 'all') {
+    if (!this.allCounter) this.allCounter = 0;
+
+    if (this.allCounter < 5) {
+        shouldShow = true;
+        this.allCounter++;
+    }
+} else {
+    shouldShow = categories.includes(filter);
+}
                 
                 if (shouldShow) {
                     item.style.display = 'block';
@@ -178,12 +190,13 @@ class PortfolioManager {
                 duration: '4 bulan',
                 client: 'FinTech Solutions'
             },
+             // PT JOGJA TAMA TRI CITA 
             dashboard: {
                 title: 'Work Experience',
                 category: 'Employment',
-                description: 'Secretary to the Board of Directors of PT. Jogja Tama Tri Cita and Administrative Staff of the Pati Regency Health Office',
-                challenge: 'Kurangnya Kepercayaan di Awal Kerja Sama. Komunikasi yang Kurang Efektif',
-                solution: ' Bangun Trust dengan Konsistensi & Transparansi,Kembangkan Komunikasi Dua Arah yang Aktif,Perluas Jaringan secara Aktif.',
+                description: 'Secretary to the Board of Directors of PT. Jogja Tama Tri Cita',
+                challenge: 'Tantangan utama: mengatur jadwal perjalanan dinas direksi yang padat dan dinamis, menyusun estimasi anggaran perjalanan secara akurat, serta menangani komunikasi dengan klien-klien strategis direktur secara profesional dan cepat.',
+                solution: 'Solusi baru...',
                 results: [
                     'Membangun relasi lebih tepat sasaran lebih',
                     'Meningkatkakn Citra dan Kepercayaan Bisnis 85%',
@@ -193,14 +206,38 @@ class PortfolioManager {
                 images: [
                     'images/portfolio/Membangunrelasi1.jpg',
                     'images/portfolio/Membangunrelasi2.jpg',
-                    'images/portfolio/Membangunrelasi3.jpg'
+                    'images/portfolio/Sekretariat_Direksi.jpeg',
+                    'images/portfolio/Foto_Client1.jpeg',
+                    'images/portfolio/FotoClient_Bluebird.jpeg',
+
                 ],
                 liveUrl: 'https://dataviz-pro-demo.com',
                 duration: '2 Tahun',
                 client: 'Kerjasama'
             },
+            dashboard2: {   // ✅ PUSKESMAS DUKUHSETI
+    title: 'DINAS KESEHATAN KABUPATEN PATI',
+    category: 'Employment',
+    description: 'Deskripsi baru...',
+    challenge: 'Challenge baru...',
+    solution: 'Solusi baru...',
+    results: [
+        'Result baru 1',
+        'Result baru 2'
+    ],
+    technologies: ['CRM'],
+    images: [
+        'images/portfolio/Pekerjaan_Pusk2.jpeg',
+        'images/portfolio/Pekerjaan_Pusk4.jpeg',
+         'images/portfolio/Pekerjaan_Pusk3.jpeg',
+    ],
+    liveUrl: '#',
+    duration: '1 Tahun',
+    client: 'Client Baru'
+},
+ // Training & Certifications 
             branding: {
-                title: 'GreenTech - Brand Identity',
+                title: 'certificate',
                 category: 'Branding • Visual Identity',
                 description: 'Identitas visual lengkap untuk startup teknologi hijau, termasuk logo, color palette, dan brand guidelines yang comprehensive.',
                 challenge: 'Menciptakan brand identity yang mencerminkan nilai sustainability dan inovasi teknologi secara bersamaan.',
@@ -213,13 +250,97 @@ class PortfolioManager {
                 ],
                 technologies: ['Illustrator', 'Photoshop', 'InDesign', 'After Effects'],
                 images: [
-                    'images/portfolio/branding-1.jpg',
-                    'images/portfolio/branding-2.jpg',
-                    'images/portfolio/branding-3.jpg'
+                    'images/portfolio/WahyuYogaPratama_TOEFL-ITP.PNG',
+
                 ],
                 duration: '2 bulan',
                 client: 'GreenTech Innovations'
             },
+            // SERTIFIKAT BNSP
+            branding2: {
+                title: 'certificate BNSP ',
+                category: 'Branding • Visual Identity',
+                description: 'Identitas visual lengkap untuk startup teknologi hijau, termasuk logo, color palette, dan brand guidelines yang comprehensive.',
+                challenge: 'Menciptakan brand identity yang mencerminkan nilai sustainability dan inovasi teknologi secara bersamaan.',
+                solution: 'Mengembangkan visual language yang menggabungkan elemen natural dengan sentuhan teknologi modern.',
+                results: [
+                    'Brand recognition meningkat 200%',
+                    'Social media engagement +150%',
+                    'Investor interest meningkat signifikan',
+                    'Brand consistency score 98%'
+                ],
+                technologies: ['Illustrator', 'Photoshop', 'InDesign', 'After Effects'],
+                images: [
+                    'images/portfolio/WahyuYogaPratama_TOEFL-ITP.PNG',
+
+                ],
+                duration: '2 bulan',
+                client: 'GreenTech Innovations'
+                 },
+                  // CONTENT CREATOR
+                 branding3: {
+                title: 'CONTENT CREATOR',
+                category: 'Branding • Visual Identity',
+                description: 'Identitas visual lengkap untuk startup teknologi hijau, termasuk logo, color palette, dan brand guidelines yang comprehensive.',
+                challenge: 'Menciptakan brand identity yang mencerminkan nilai sustainability dan inovasi teknologi secara bersamaan.',
+                solution: 'Mengembangkan visual language yang menggabungkan elemen natural dengan sentuhan teknologi modern.',
+                results: [
+                    'Brand recognition meningkat 200%',
+                    'Social media engagement +150%',
+                    'Investor interest meningkat signifikan',
+                    'Brand consistency score 98%'
+                ],
+                technologies: ['Illustrator', 'Photoshop', 'InDesign', 'After Effects'],
+                images: [
+                    'images/portfolio/WahyuYogaPratama_TOEFL-ITP.PNG',
+
+                ],
+                duration: '2 bulan',
+                client: 'GreenTech Innovations'
+                 },
+
+                  // SERTIFIKAT DUTA WISATA PATI
+                 branding4: {
+                title: 'CONTENT CREATOR',
+                category: 'Branding • Visual Identity',
+                description: 'Identitas visual lengkap untuk startup teknologi hijau, termasuk logo, color palette, dan brand guidelines yang comprehensive.',
+                challenge: 'Menciptakan brand identity yang mencerminkan nilai sustainability dan inovasi teknologi secara bersamaan.',
+                solution: 'Mengembangkan visual language yang menggabungkan elemen natural dengan sentuhan teknologi modern.',
+                results: [
+                    'Brand recognition meningkat 200%',
+                    'Social media engagement +150%',
+                    'Investor interest meningkat signifikan',
+                    'Brand consistency score 98%'
+                ],
+                technologies: ['Illustrator', 'Photoshop', 'InDesign', 'After Effects'],
+                images: [
+                    'images/portfolio/WahyuYogaPratama_TOEFL-ITP.PNG',
+
+                ],
+                duration: '2 bulan',
+                client: 'GreenTech Innovations'
+                 },
+                  // SERTIFIKAT MAS MBAK JAWA TENGAH 
+                 branding5: {
+                title: 'CONTENT CREATOR',
+                category: 'Branding • Visual Identity',
+                description: 'Identitas visual lengkap untuk startup teknologi hijau, termasuk logo, color palette, dan brand guidelines yang comprehensive.',
+                challenge: 'Menciptakan brand identity yang mencerminkan nilai sustainability dan inovasi teknologi secara bersamaan.',
+                solution: 'Mengembangkan visual language yang menggabungkan elemen natural dengan sentuhan teknologi modern.',
+                results: [
+                    'Brand recognition meningkat 200%',
+                    'Social media engagement +150%',
+                    'Investor interest meningkat signifikan',
+                    'Brand consistency score 98%'
+                ],
+                technologies: ['Illustrator', 'Photoshop', 'InDesign', 'After Effects'],
+                images: [
+                    'images/portfolio/WahyuYogaPratama_TOEFL-ITP.PNG',
+
+                ],
+                duration: '2 bulan',
+                client: 'GreenTech Innovations'
+                 },
             lms: {
                 title: 'CRM (Customer Relationship Management)',
                 category: '• Marketing Konvensional',
@@ -703,6 +824,7 @@ class PortfolioManager {
 // Initialize portfolio when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     const portfolioManager = new PortfolioManager();
+    portfolioManager.filterPortfolio('all');
     
     // Make portfolio manager globally available
     window.portfolioManager = portfolioManager;

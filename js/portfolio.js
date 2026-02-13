@@ -192,28 +192,31 @@ if (filter === 'all') {
             },
              // PT JOGJA TAMA TRI CITA 
             dashboard: {
-                title: 'Work Experience',
-                category: 'Employment',
+                title: 'PT JOGJA TAMA TRI CITA ',
+                category: 'Work Experience',
                 description: 'Secretary to the Board of Directors of PT. Jogja Tama Tri Cita',
-                challenge: 'Tantangan utama: mengatur jadwal perjalanan dinas direksi yang padat dan dinamis, menyusun estimasi anggaran perjalanan secara akurat, serta menangani komunikasi dengan klien-klien strategis direktur secara profesional dan cepat.',
-                solution: 'Solusi baru...',
+                challenge: 'Jogja Tama Tri Cita is a holding company engaged in certification, training and human resource development, event organizer, creative production, as well as program study and business development consultants.',
+                solution: 'Managed executive business travel scheduling and budgeting, coordinated strategic client communications and meetings, and maintained systematic documentation of correspondence and meeting records.',
+                
                 results: [
-                    'Membangun relasi lebih tepat sasaran lebih',
-                    'Meningkatkakn Citra dan Kepercayaan Bisnis 85%',
-          
+                    'Ketepatan jadwal dinas ↑ 95% ',
+                    'Anggaran lebih akurat, tekan pembengkakan biaya',
+                    'Respons klien cepat, hubungan profesional terjaga',
+                    'Risiko miskomunikasi & keterlambatan administrasi ↓ signifikan',
+
+
                 ],
-                technologies: ['CRM', 'LinkedIn', 'Communication Tool'],
+                technologies: ['MS Office', 'Google Workspace', 'Travel app','Arsip digital.'],
                 images: [
                     'images/portfolio/Membangunrelasi1.jpg',
                     'images/portfolio/Membangunrelasi2.jpg',
-                    'images/portfolio/Sekretariat_Direksi.jpeg',
                     'images/portfolio/Foto_Client1.jpeg',
                     'images/portfolio/FotoClient_Bluebird.jpeg',
 
                 ],
-                liveUrl: 'https://dataviz-pro-demo.com',
+                liveUrl: 'https://www.instagram.com/sekretariatdireksi?igsh=MTljczRqaHh6eTB4MQ==',
                 duration: '2 Tahun',
-                client: 'Kerjasama'
+                client: 'Board of Directors PT. Jogja Tama Tri Cita'
             },
             dashboard2: {   // ✅ PUSKESMAS DUKUHSETI
     title: 'DINAS KESEHATAN KABUPATEN PATI',
@@ -418,17 +421,17 @@ if (filter === 'all') {
                     
                     <div class="project-details">
                         <div class="detail-section">
-                            <h3>Challenge</h3>
+                            <h3>About</h3>
                             <p>${project.challenge}</p>
                         </div>
                         
                         <div class="detail-section">
-                            <h3>Solution</h3>
+                            <h3>Main Areas of Responsibility</h3>
                             <p>${project.solution}</p>
                         </div>
                         
                         <div class="detail-section">
-                            <h3>Results</h3>
+                            <h3>Performance Outcomes</h3>
                             <ul class="results-list">
                                 ${project.results.map(result => `<li>${result}</li>`).join('')}
                             </ul>

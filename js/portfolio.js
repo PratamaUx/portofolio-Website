@@ -169,26 +169,27 @@ if (filter === 'all') {
                 duration: '3 bulan',
                 client: 'StartupCommerce Inc.'
             },
+            //DUTA WISATA PATI
             banking: {
                 title: 'Duta Wisata Kabupaten Pati',
-                category: 'Prestasi Kabupaten',
-                description: 'Aplikasi mobile banking dengan desain yang clean dan fitur-fitur inovatif untuk kemudahan transaksi keuangan sehari-hari.',
-                challenge: 'Menciptakan aplikasi banking yang aman, mudah digunakan, dan dapat dipercaya oleh pengguna dari berbagai kalangan usia.',
-                solution: 'Menerapkan prinsip security by design, menggunakan biometric authentication, dan menyederhanakan user flow untuk transaksi umum.',
+                category: 'Regency Achievements',
+                description: '',
+                challenge: 'Recognized as a top regional Tourism Ambassador, demonstrating strong communication, cultural expertise, and stakeholder engagement in collaboration with Dinas Pariwisata Pati.',
+                solution: 'Built strong expertise in local tourism and culture through intensive communication training and practical interview and case study simulations.',
                 results: [
-                    'Download rate 50K+ dalam 3 bulan',
-                    'Security rating 5/5 dari audit eksternal',
-                    'Average session time 8 menit',
-                    'Customer support tickets turun 30%'
+                    'Achieved 2nd place at regency level competition',
+                    'Served as an official representative for Pati tourism promotion',
+                    'Built strong networks with government institutions, tourism stakeholders, and community organizations',
+
                 ],
-                technologies: ['React Native', 'Firebase', 'Biometric API', 'Figma', 'Principle'],
+                technologies: ['PowerPoint', 'Canva', 'social media platforms', 'Figma', 'Online Research'],
                 images: [
                     'images/portfolio/Duwis_Pati1.jpg',
                     'images/portfolio/Duwis_Pati2.jpg',
                     'images/portfolio/Duwis_Pati3.jpg'
                 ],
-                duration: '4 bulan',
-                client: 'FinTech Solutions'
+                duration: '12 Months',
+                client: 'Dinas Pariwisata Pati, local communities, and tourists'
             },
              // PT JOGJA TAMA TRI CITA 
             dashboard: {
@@ -219,24 +220,27 @@ if (filter === 'all') {
                 client: 'Board of Directors PT. Jogja Tama Tri Cita'
             },
             dashboard2: {   // ✅ PUSKESMAS DUKUHSETI
-    title: 'DINAS KESEHATAN KABUPATEN PATI',
-    category: 'Employment',
-    description: 'Deskripsi baru...',
-    challenge: 'Challenge baru...',
-    solution: 'Solusi baru...',
+    title: 'Pati Regency Health Office',
+    category: 'Government Agencies',
+    description: 'Administrative Staff',
+    challenge: 'A regional public health authority overseeing the planning, implementation, and administration of community health programs, supported by integrated service units and standardized operational procedures to enhance public healthcare delivery and administrative efficiency.',
+    solution: 'Managed incoming and outgoing correspondence (manual and digital), verified document completeness and reports, ensured timely document distribution, and supported meetings through scheduling, minute-taking, and administrative coordination.',
     results: [
-        'Result baru 1',
-        'Result baru 2'
+        'Improved public service efficiency through structured administrative support',
+        'Standardized SOPs via cross-unit collaboration',
+        'Boosted document retrieval speed by 40% with a coding system',
+        'Supported 10+ health programs reaching 5,000+ participants',
     ],
-    technologies: ['CRM'],
+    technologies: ['MS Office','Google Workspace','scanner'],
     images: [
+         'images/portfolio/Membangunrelasi3.jpeg',
         'images/portfolio/Pekerjaan_Pusk2.jpeg',
         'images/portfolio/Pekerjaan_Pusk4.jpeg',
          'images/portfolio/Pekerjaan_Pusk3.jpeg',
     ],
-    liveUrl: '#',
-    duration: '1 Tahun',
-    client: 'Client Baru'
+
+    duration: '2 Tahun',
+    client: 'Internal (all areas of Pati Health Office) & External (Community Health Centers, Hospitals, partner agencies, community)'
 },
  // Training & Certifications 
             branding: {
@@ -365,15 +369,16 @@ if (filter === 'all') {
             },
             fooddelivery: {
                 title: 'Mas Mbak Jawa Tengah 2024',
-                category: 'Prestasi Provinsi',
-                description: 'keterampilan komunikasi, pengetahuan pariwisata, dan soft skills yang mendukung peran sebagai representatif daerah.',
-                challenge: 'Kurangnya Minat Generasi Muda terhadap Pariwisata Lokal,Tantangan Bahasa dan Pengetahuan Global.',
-                solution: 'Rutin melatih kemampuan bahasa Inggris atau bahasa asing lain.Update pengetahuan umum dan isu pariwisata global serta lokal secara berkala.',
+                category: 'Provincial Achievements',
+                description: 'Predikat Mas Favorit Jawa Tengah.',
+                challenge: 'A competitive program organized by the provincial tourism authority of Dinas Pariwisata Provinsi Jawa Tengah to identify and develop high-potential young talents to support and promote tourism across Central Java.',
+                solution: 'Conducted regional tourism research and completed intensive professional coaching, strengthened through bilingual interviews, debates, and presentation training to enhance communication and analytical skills across Central Java Province.',
                 results: [
-                    'Tumbuhnya Wisata Alternatif dan Ekonomi Lokal UMKM di Pati 20%',
-                    'Branding Positif Duta Wisata di Media dan Masyarakat 89%',
-                    'Kompetensi Pribadi yang Meningkat 70%',
-                    'Peningkatan Kesadaran dan Minat Wisata Lokal 50%'
+                    'Ranked among the Top 10 finalists at the provincial level',
+                    'Selected as an official icon for tourism and cultural promotion in Central Java',
+                    'Served as master of ceremonies, keynote speaker, and tourism advertising ambassador',
+                    'Built extensive networks with provincial government bodies, media partners, and creative industries',
+
                 ],
                 technologies: ['Instagram', 'Youtube', 'Tiktok', 'Website', 'Meta Business Suite'],
                 images: [
@@ -381,8 +386,8 @@ if (filter === 'all') {
                     'images/portfolio/MasMbak2.jpg',
                     'images/portfolio/MasMbak3.jpg'
                 ],
-                duration: '1 Tahun',
-                client: 'Desa Wisata dan Wisatawan'
+                duration: '1 year',
+                client: 'Tourist Villages and Tourists'
             }
         };
         

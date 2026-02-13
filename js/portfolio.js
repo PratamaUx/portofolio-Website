@@ -242,7 +242,7 @@ if (filter === 'all') {
     duration: '2 Tahun',
     client: 'Internal (all areas of Pati Health Office) & External (Community Health Centers, Hospitals, partner agencies, community)'
 },
- // Training & Certifications 
+ // PROJECT
             branding: {
                 title: 'certificate',
                 category: 'Branding • Visual Identity',
@@ -263,7 +263,7 @@ if (filter === 'all') {
                 duration: '2 bulan',
                 client: 'GreenTech Innovations'
             },
-            // SERTIFIKAT BNSP
+            // RAKERNAS JKPI 
             branding2: {
                 title: 'certificate BNSP ',
                 category: 'Branding • Visual Identity',
@@ -278,10 +278,10 @@ if (filter === 'all') {
                 ],
                 technologies: ['Illustrator', 'Photoshop', 'InDesign', 'After Effects'],
                 images: [
-                    'images/portfolio/WahyuYogaPratama_TOEFL-ITP.PNG',
+                    'images/portfolio/Rakernas_JKPI2',
 
                 ],
-                duration: '2 bulan',
+                duration: '3 bulan',
                 client: 'GreenTech Innovations'
                  },
                   // CONTENT CREATOR
@@ -299,7 +299,7 @@ if (filter === 'all') {
                 ],
                 technologies: ['Illustrator', 'Photoshop', 'InDesign', 'After Effects'],
                 images: [
-                    'images/portfolio/WahyuYogaPratama_TOEFL-ITP.PNG',
+                    'images/portfolio/Pembuatan_Konten.jpeg',
 
                 ],
                 duration: '2 bulan',
@@ -321,7 +321,7 @@ if (filter === 'all') {
                 ],
                 technologies: ['Illustrator', 'Photoshop', 'InDesign', 'After Effects'],
                 images: [
-                    'images/portfolio/WahyuYogaPratama_TOEFL-ITP.PNG',
+                    'images/portfolio/Perjalanan_Dinas4',
 
                 ],
                 duration: '2 bulan',

@@ -7,10 +7,10 @@ class PortfolioManager {
         this.portfolioItems = document.querySelectorAll('.portfolio-item');
         this.currentFilter = null;
         this.isAnimating = false;
-        
+
         this.init();
     }
-    
+
     init() {
         this.setupFilterButtons();
         this.setupPortfolioItems();
@@ -18,7 +18,7 @@ class PortfolioManager {
         this.setupLightbox();
         this.addKeyboardNavigation();
     }
-    
+
     setupFilterButtons() {
         this.filterButtons.forEach(button => {
             button.addEventListener('click', (e) => {
@@ -29,12 +29,12 @@ class PortfolioManager {
             });
         });
     }
-    
+
     setupPortfolioItems() {
         this.portfolioItems.forEach((item, index) => {
             // Add stagger animation delay
             item.style.animationDelay = `${index * 0.1}s`;
-            
+
             // Add click handlers for project links
             const projectLinks = item.querySelectorAll('.project-link');
             projectLinks.forEach(link => {
@@ -46,12 +46,12 @@ class PortfolioManager {
                     });
                 }
             });
-            
+
             // Add hover effects for touch devices
             item.addEventListener('touchstart', () => {
                 item.classList.add('touch-active');
             });
-            
+
             item.addEventListener('touchend', () => {
                 setTimeout(() => {
                     item.classList.remove('touch-active');
@@ -59,13 +59,13 @@ class PortfolioManager {
             });
         });
     }
-    
+
     filterPortfolio(filter) {
         if (this.isAnimating || filter === this.currentFilter) return;
-        
+
         this.isAnimating = true;
         this.currentFilter = filter;
-        
+
         // Hide all items first
         this.portfolioItems.forEach(item => {
             item.classList.add('filtering');
@@ -77,17 +77,17 @@ class PortfolioManager {
                 const categories = item.getAttribute('data-category').split(' ');
                 let shouldShow = false;
 
-if (filter === 'all') {
-    if (!this.allCounter) this.allCounter = 0;
+                if (filter === 'all') {
+                    if (!this.allCounter) this.allCounter = 0;
 
-    if (this.allCounter < 5) {
-        shouldShow = true;
-        this.allCounter++;
-    }
-} else {
-    shouldShow = categories.includes(filter);
-}
-                
+                    if (this.allCounter < 5) {
+                        shouldShow = true;
+                        this.allCounter++;
+                    }
+                } else {
+                    shouldShow = categories.includes(filter);
+                }
+
                 if (shouldShow) {
                     item.style.display = 'block';
                     item.classList.remove('filtering');
@@ -97,13 +97,13 @@ if (filter === 'all') {
                     item.classList.remove('filtering', 'filter-show');
                 }
             });
-            
+
             // Re-layout masonry if using masonry layout
             this.relayoutMasonry();
-            
+
             setTimeout(() => {
                 this.isAnimating = false;
-                
+
                 // Remove animation classes
                 this.portfolioItems.forEach(item => {
                     item.classList.remove('filter-show');
@@ -111,14 +111,14 @@ if (filter === 'all') {
             }, 300);
         }, 150);
     }
-    
+
     updateActiveFilter(activeButton) {
         this.filterButtons.forEach(button => {
             button.classList.remove('active');
         });
         activeButton.classList.add('active');
     }
-    
+
     relayoutMasonry() {
         // If using a masonry library, trigger relayout here
         // Example for Masonry.js:
@@ -126,23 +126,23 @@ if (filter === 'all') {
         //     window.masonry.layout();
         // }
     }
-    
+
     openProjectModal(projectId) {
         const projectData = this.getProjectData(projectId);
         if (!projectData) return;
-        
+
         const modal = this.createProjectModal(projectData);
         document.body.appendChild(modal);
-        
+
         // Show modal with animation
         setTimeout(() => {
             modal.classList.add('show');
         }, 10);
-        
+
         // Close modal handlers
         this.setupModalCloseHandlers(modal);
     }
-    
+
     getProjectData(projectId) {
         // Project data - in a real application, this would come from an API or database
         const projects = {
@@ -160,9 +160,9 @@ if (filter === 'all') {
                 ],
                 technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'AWS', 'Figma'],
                 images: [
-                'images/portfolio/MC_Wisuda.jpeg',
-                'images/portfolio/Wahyu_Narasumber.jpeg',
-                'images/portfolio/MC.jpeg',
+                    'images/portfolio/MC_Wisuda.jpeg',
+                    'images/portfolio/Wahyu_Narasumber.jpeg',
+                    'images/portfolio/MC.jpeg',
                 ],
                 liveUrl: 'https://shopease-demo.com',
                 githubUrl: 'https://github.com/wahyu/shopease',
@@ -170,7 +170,7 @@ if (filter === 'all') {
                 client: 'StartupCommerce Inc.'
             },
             //DUTA WISATA PATI
-            banking: {
+            custom_banking: {
                 title: 'Duta Wisata Kabupaten Pati',
                 category: 'Regency Achievements',
                 description: '',
@@ -184,6 +184,7 @@ if (filter === 'all') {
                 ],
                 technologies: ['PowerPoint', 'Canva', 'social media platforms', 'Figma', 'Online Research'],
                 images: [
+                    'images/portfolio/Duwis_Pati.jpg',
                     'images/portfolio/Duwis_Pati1.jpg',
                     'images/portfolio/Duwis_Pati2.jpg',
                     'images/portfolio/Duwis_Pati3.jpg'
@@ -191,14 +192,31 @@ if (filter === 'all') {
                 duration: '12 Months',
                 client: 'Dinas Pariwisata Pati, local communities, and tourists'
             },
-             // PT JOGJA TAMA TRI CITA 
+            campus_ambassador: {
+                title: 'Campus Ambassador 2024',
+                category: 'University Achievements',
+                description: 'Campus Ambassador Winner',
+                challenge: 'Representation of high-achieving and communicative students.',
+                solution: 'Actively participated in campus events and promoted university programs to prospective students.',
+                results: [
+                    'Winner Campus Ambassador 2024',
+                    'Increased student engagement in campus activities',
+                ],
+                technologies: ['Public Speaking', 'Social Media', 'Event Management'],
+                images: [
+                    'images/portfolio/Dupus_Stie.jpg',
+                ],
+                duration: '1 Year',
+                client: 'University'
+            },
+            // PT JOGJA TAMA TRI CITA 
             dashboard: {
                 title: 'PT JOGJA TAMA TRI CITA ',
                 category: 'Work Experience',
                 description: 'Secretary to the Board of Directors of PT. Jogja Tama Tri Cita',
                 challenge: 'Jogja Tama Tri Cita is a holding company engaged in certification, training and human resource development, event organizer, creative production, as well as program study and business development consultants.',
                 solution: 'Managed executive business travel scheduling and budgeting, coordinated strategic client communications and meetings, and maintained systematic documentation of correspondence and meeting records.',
-                
+
                 results: [
                     'Ketepatan jadwal dinas ↑ 95% ',
                     'Anggaran lebih akurat, tekan pembengkakan biaya',
@@ -207,7 +225,7 @@ if (filter === 'all') {
 
 
                 ],
-                technologies: ['MS Office', 'Google Workspace', 'Travel app','Arsip digital.'],
+                technologies: ['MS Office', 'Google Workspace', 'Travel app', 'Arsip digital.'],
                 images: [
                     'images/portfolio/Membangunrelasi1.jpg',
                     'images/portfolio/Membangunrelasi2.jpg',
@@ -220,134 +238,120 @@ if (filter === 'all') {
                 client: 'Board of Directors PT. Jogja Tama Tri Cita'
             },
             dashboard2: {   // ✅ PUSKESMAS DUKUHSETI
-    title: 'Pati Regency Health Office',
-    category: 'Government Agencies',
-    description: 'Administrative Staff',
-    challenge: 'A regional public health authority overseeing the planning, implementation, and administration of community health programs, supported by integrated service units and standardized operational procedures to enhance public healthcare delivery and administrative efficiency.',
-    solution: 'Managed incoming and outgoing correspondence (manual and digital), verified document completeness and reports, ensured timely document distribution, and supported meetings through scheduling, minute-taking, and administrative coordination.',
-    results: [
-        'Improved public service efficiency through structured administrative support',
-        'Standardized SOPs via cross-unit collaboration',
-        'Boosted document retrieval speed by 40% with a coding system',
-        'Supported 10+ health programs reaching 5,000+ participants',
-    ],
-    technologies: ['MS Office','Google Workspace','scanner'],
-    images: [
-         'images/portfolio/Membangunrelasi3.jpeg',
-        'images/portfolio/Pekerjaan_Pusk2.jpeg',
-        'images/portfolio/Pekerjaan_Pusk4.jpeg',
-         'images/portfolio/Pekerjaan_Pusk3.jpeg',
-    ],
-
-    duration: '2 Tahun',
-    client: 'Internal (all areas of Pati Health Office) & External (Community Health Centers, Hospitals, partner agencies, community)'
-},
- // PROJECT
-            branding: {
-                title: 'certificate',
-                category: 'Branding • Visual Identity',
-                description: 'Identitas visual lengkap untuk startup teknologi hijau, termasuk logo, color palette, dan brand guidelines yang comprehensive.',
-                challenge: 'Menciptakan brand identity yang mencerminkan nilai sustainability dan inovasi teknologi secara bersamaan.',
-                solution: 'Mengembangkan visual language yang menggabungkan elemen natural dengan sentuhan teknologi modern.',
+                title: 'Pati Regency Health Office',
+                category: 'Government Agencies',
+                description: 'Administrative Staff',
+                challenge: 'A regional public health authority overseeing the planning, implementation, and administration of community health programs, supported by integrated service units and standardized operational procedures to enhance public healthcare delivery and administrative efficiency.',
+                solution: 'Managed incoming and outgoing correspondence (manual and digital), verified document completeness and reports, ensured timely document distribution, and supported meetings through scheduling, minute-taking, and administrative coordination.',
                 results: [
-                    'Brand recognition meningkat 200%',
-                    'Social media engagement +150%',
-                    'Investor interest meningkat signifikan',
-                    'Brand consistency score 98%'
+                    'Improved public service efficiency through structured administrative support',
+                    'Standardized SOPs via cross-unit collaboration',
+                    'Boosted document retrieval speed by 40% with a coding system',
+                    'Supported 10+ health programs reaching 5,000+ participants',
                 ],
-                technologies: ['Illustrator', 'Photoshop', 'InDesign', 'After Effects'],
+                technologies: ['MS Office', 'Google Workspace', 'scanner'],
+                images: [
+                    'images/portfolio/Membangunrelasi3.jpeg',
+                    'images/portfolio/Pekerjaan_Pusk2.jpeg',
+                    'images/portfolio/Pekerjaan_Pusk4.jpeg',
+                    'images/portfolio/Pekerjaan_Pusk3.jpeg',
+                ],
+
+                duration: '2 Tahun',
+                client: 'Internal (all areas of Pati Health Office) & External (Community Health Centers, Hospitals, partner agencies, community)'
+            },
+            // PROJECT
+            // JKPI 
+            toefl: {
+                title: 'Certifications: TOEFL ITP (ETS)',
+                category: 'Certifications',
+                description: 'English Proficiency Certification',
+                challenge: 'Demonstrating English language proficiency for academic and professional purposes.',
+                solution: 'Achieved a score demonstrating competency in listening, structure, and reading comprehension.',
+                results: [
+                    'TOEFL ITP Certification from ETS'
+                ],
+                technologies: ['English Language'],
                 images: [
                     'images/portfolio/WahyuYogaPratama_TOEFL-ITP.PNG',
-
                 ],
-                duration: '2 bulan',
-                client: 'GreenTech Innovations'
+                duration: '-',
+                client: 'ETS'
             },
             // RAKERNAS JKPI 
-            branding2: {
-                title: 'certificate BNSP ',
-                category: 'Branding • Visual Identity',
-                description: 'Identitas visual lengkap untuk startup teknologi hijau, termasuk logo, color palette, dan brand guidelines yang comprehensive.',
-                challenge: 'Menciptakan brand identity yang mencerminkan nilai sustainability dan inovasi teknologi secara bersamaan.',
-                solution: 'Mengembangkan visual language yang menggabungkan elemen natural dengan sentuhan teknologi modern.',
+            rakernas: {
+                title: 'RAKERNAS JKPI INDONESIA',
+                category: 'Event Nasional',
+                description: 'Stage Manager Jaringan Kota Pusaka Indonesia',
+                challenge: 'Managing stage operations for a national level event involving multiple stakeholders.',
+                solution: 'Coordinated stage activities, ensured smooth flow of the event, and managed technical requirements.',
                 results: [
-                    'Brand recognition meningkat 200%',
-                    'Social media engagement +150%',
-                    'Investor interest meningkat signifikan',
-                    'Brand consistency score 98%'
+                    'Successful execution of the national working meeting',
+                    'Coordination of multiple cultural performances',
                 ],
-                technologies: ['Illustrator', 'Photoshop', 'InDesign', 'After Effects'],
+                technologies: ['Event Management', 'Coordination', 'Stage Management'],
                 images: [
-                    'images/portfolio/Rakernas_JKPI2',
-
+                    'images/portfolio/Rakernas_JKPI2.jpeg',
+                    'images/portfolio/Rakernas_JKPI1.jpeg',
                 ],
-                duration: '3 bulan',
-                client: 'GreenTech Innovations'
-                 },
-                  // CONTENT CREATOR
-                 branding3: {
+                duration: 'Event Duration',
+                client: 'Jaringan Kota Pusaka Indonesia'
+            },
+            content_creator: {
                 title: 'CONTENT CREATOR',
-                category: 'Branding • Visual Identity',
-                description: 'Identitas visual lengkap untuk startup teknologi hijau, termasuk logo, color palette, dan brand guidelines yang comprehensive.',
-                challenge: 'Menciptakan brand identity yang mencerminkan nilai sustainability dan inovasi teknologi secara bersamaan.',
-                solution: 'Mengembangkan visual language yang menggabungkan elemen natural dengan sentuhan teknologi modern.',
+                category: 'Sertifikat BNSP',
+                description: 'Certified Content Creator by BNSP',
+                challenge: 'Demonstrating competency in content creation professionally.',
+                solution: 'Completed certification process for content creation, proving skills in planning, producing, and evaluating content.',
                 results: [
-                    'Brand recognition meningkat 200%',
-                    'Social media engagement +150%',
-                    'Investor interest meningkat signifikan',
-                    'Brand consistency score 98%'
+                    'BNSP Certification for Content Creator',
                 ],
-                technologies: ['Illustrator', 'Photoshop', 'InDesign', 'After Effects'],
+                technologies: ['Content Creation', 'Social Media Strategy'],
                 images: [
                     'images/portfolio/Pembuatan_Konten.jpeg',
 
                 ],
-                duration: '2 bulan',
-                client: 'GreenTech Innovations'
-                 },
+                duration: '-',
+                client: 'BNSP'
+            },
 
-                  // SERTIFIKAT DUTA WISATA PATI
-                 branding4: {
-                title: 'CONTENT CREATOR',
-                category: 'Branding • Visual Identity',
-                description: 'Identitas visual lengkap untuk startup teknologi hijau, termasuk logo, color palette, dan brand guidelines yang comprehensive.',
-                challenge: 'Menciptakan brand identity yang mencerminkan nilai sustainability dan inovasi teknologi secara bersamaan.',
-                solution: 'Mengembangkan visual language yang menggabungkan elemen natural dengan sentuhan teknologi modern.',
+            // PENDAMPINGAN PERJALANAN DINAS
+            travel_management: {
+                title: 'PENDAMPINGAN PERJALANAN DINAS',
+                category: 'Agenda Meeting Luar Kota',
+                description: 'Sekretaris Direksi',
+                challenge: 'Managing executive travel and meeting schedules efficiently.',
+                solution: 'Arranged travel logistics, accompanied directors, and ensured meeting objectives were met.',
                 results: [
-                    'Brand recognition meningkat 200%',
-                    'Social media engagement +150%',
-                    'Investor interest meningkat signifikan',
-                    'Brand consistency score 98%'
+                    'Smooth execution of official travel',
+                    'Effective meeting facilitation',
                 ],
-                technologies: ['Illustrator', 'Photoshop', 'InDesign', 'After Effects'],
+                technologies: ['Travel Management', 'Scheduling', 'Coordination'],
                 images: [
-                    'images/portfolio/Perjalanan_Dinas4',
-
+                    'images/portfolio/Perjalanan_Dinas1.jpeg',
+                    'images/portfolio/Perjalanan_Dinas4.jpeg',
                 ],
-                duration: '2 bulan',
-                client: 'GreenTech Innovations'
-                 },
-                  // SERTIFIKAT MAS MBAK JAWA TENGAH 
-                 branding5: {
-                title: 'CONTENT CREATOR',
-                category: 'Branding • Visual Identity',
-                description: 'Identitas visual lengkap untuk startup teknologi hijau, termasuk logo, color palette, dan brand guidelines yang comprehensive.',
-                challenge: 'Menciptakan brand identity yang mencerminkan nilai sustainability dan inovasi teknologi secara bersamaan.',
-                solution: 'Mengembangkan visual language yang menggabungkan elemen natural dengan sentuhan teknologi modern.',
+                duration: 'Ongoing',
+                client: 'Company Directors'
+            },
+            // MENJAGA HUBUNGAN CLIENT
+            client_relations: {
+                title: 'MENJAGA HUBUNGAN CLIENT',
+                category: 'Sertifikat Provinsi',
+                description: 'Maintaining professional relationships with clients.',
+                challenge: 'Building and sustaining long-term professional relationships.',
+                solution: 'Engaged with clients regularly, addressed their needs, and ensured satisfaction.',
                 results: [
-                    'Brand recognition meningkat 200%',
-                    'Social media engagement +150%',
-                    'Investor interest meningkat signifikan',
-                    'Brand consistency score 98%'
+                    'Improved client retention',
+                    'Stronger professional network',
                 ],
-                technologies: ['Illustrator', 'Photoshop', 'InDesign', 'After Effects'],
+                technologies: ['Communication', 'Relationship Management'],
                 images: [
-                    'images/portfolio/WahyuYogaPratama_TOEFL-ITP.PNG',
-
+                    'images/portfolio/MenjagaHubunganClient4.jpeg',
                 ],
-                duration: '2 bulan',
-                client: 'GreenTech Innovations'
-                 },
+                duration: 'Ongoing',
+                client: 'Various Clients'
+            },
             lms: {
                 title: 'CRM (Customer Relationship Management)',
                 category: '• Marketing Konvensional',
@@ -390,10 +394,10 @@ if (filter === 'all') {
                 client: 'Tourist Villages and Tourists'
             }
         };
-        
+
         return projects[projectId] || null;
     }
-    
+
     createProjectModal(project) {
         const modal = document.createElement('div');
         modal.className = 'project-modal';
@@ -476,46 +480,46 @@ if (filter === 'all') {
                 </div>
             </div>
         `;
-        
+
         // Setup image gallery
         this.setupModalImageGallery(modal);
-        
+
         return modal;
     }
-    
+
     setupModalImageGallery(modal) {
         const mainImg = modal.querySelector('.project-main-img');
         const thumbnails = modal.querySelectorAll('.thumbnail');
-        
+
         thumbnails.forEach(thumbnail => {
             thumbnail.addEventListener('click', () => {
                 const index = thumbnail.getAttribute('data-index');
                 const newSrc = thumbnail.src;
-                
+
                 // Update main image
                 mainImg.src = newSrc;
-                
+
                 // Update active thumbnail
                 thumbnails.forEach(thumb => thumb.classList.remove('active'));
                 thumbnail.classList.add('active');
             });
         });
     }
-    
+
     setupModalCloseHandlers(modal) {
         const closeBtn = modal.querySelector('.modal-close');
         const overlay = modal.querySelector('.modal-overlay');
-        
+
         const closeModal = () => {
             modal.classList.remove('show');
             setTimeout(() => {
                 modal.remove();
             }, 300);
         };
-        
+
         closeBtn.addEventListener('click', closeModal);
         overlay.addEventListener('click', closeModal);
-        
+
         // Keyboard navigation
         document.addEventListener('keydown', function escapeHandler(e) {
             if (e.key === 'Escape') {
@@ -524,7 +528,7 @@ if (filter === 'all') {
             }
         });
     }
-    
+
     setupModal() {
         // Add modal styles to document
         const modalStyles = `
@@ -723,7 +727,7 @@ if (filter === 'all') {
                 }
             }
         `;
-        
+
         if (!document.querySelector('#modal-styles')) {
             const styleSheet = document.createElement('style');
             styleSheet.id = 'modal-styles';
@@ -731,7 +735,7 @@ if (filter === 'all') {
             document.head.appendChild(styleSheet);
         }
     }
-    
+
     setupLightbox() {
         // Simple lightbox for portfolio images
         this.portfolioItems.forEach(item => {
@@ -744,7 +748,7 @@ if (filter === 'all') {
             });
         });
     }
-    
+
     openLightbox(src, alt) {
         const lightbox = document.createElement('div');
         lightbox.className = 'lightbox';
@@ -757,27 +761,27 @@ if (filter === 'all') {
                 </button>
             </div>
         `;
-        
+
         document.body.appendChild(lightbox);
-        
+
         setTimeout(() => {
             lightbox.classList.add('show');
         }, 10);
-        
+
         // Close handlers
         const closeBtn = lightbox.querySelector('.lightbox-close');
         const overlay = lightbox.querySelector('.lightbox-overlay');
-        
+
         const closeLightbox = () => {
             lightbox.classList.remove('show');
             setTimeout(() => {
                 lightbox.remove();
             }, 300);
         };
-        
+
         closeBtn.addEventListener('click', closeLightbox);
         overlay.addEventListener('click', closeLightbox);
-        
+
         document.addEventListener('keydown', function escapeHandler(e) {
             if (e.key === 'Escape') {
                 closeLightbox();
@@ -785,7 +789,7 @@ if (filter === 'all') {
             }
         });
     }
-    
+
     addKeyboardNavigation() {
         document.addEventListener('keydown', (e) => {
             // Number keys for filter shortcuts
@@ -796,7 +800,7 @@ if (filter === 'all') {
                 '4': 'mobile',
                 '5': 'branding'
             };
-            
+
             if (filterMap[e.key]) {
                 e.preventDefault();
                 const filter = filterMap[e.key];
@@ -808,7 +812,7 @@ if (filter === 'all') {
             }
         });
     }
-    
+
     // Public methods
     filterByCategory(category) {
         const button = document.querySelector(`[data-filter="${category}"]`);
@@ -817,26 +821,26 @@ if (filter === 'all') {
             this.updateActiveFilter(button);
         }
     }
-    
+
     getCurrentFilter() {
         return this.currentFilter;
     }
-    
+
     getVisibleItems() {
-        return Array.from(this.portfolioItems).filter(item => 
+        return Array.from(this.portfolioItems).filter(item =>
             item.style.display !== 'none'
         );
     }
 }
 
 // Initialize portfolio when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const portfolioManager = new PortfolioManager();
     portfolioManager.filterPortfolio('all');
-    
+
     // Make portfolio manager globally available
     window.portfolioManager = portfolioManager;
-    
+
     // Add portfolio-specific styles
     const portfolioStyles = `
         .portfolio-item.filtering {
@@ -915,7 +919,7 @@ document.addEventListener('DOMContentLoaded', function() {
             background: rgba(255, 255, 255, 0.2);
         }
     `;
-    
+
     if (!document.querySelector('#portfolio-styles')) {
         const styleSheet = document.createElement('style');
         styleSheet.id = 'portfolio-styles';

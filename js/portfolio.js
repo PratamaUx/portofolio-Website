@@ -6,7 +6,8 @@ class PortfolioManager {
         this.filterButtons = document.querySelectorAll('.filter-btn');
         this.portfolioItems = document.querySelectorAll('.portfolio-item');
         this.loadMoreBtn = document.getElementById('loadMoreBtn');
-        this.itemsToShow = 5;
+        this.initialLimit = 5;
+        this.itemsToShow = this.initialLimit;
         this.currentFilter = null;
         this.isAnimating = false;
 
@@ -26,9 +27,22 @@ class PortfolioManager {
         if (this.loadMoreBtn) {
             this.loadMoreBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                this.itemsToShow = this.portfolioItems.length;
+
+                if (this.itemsToShow < this.portfolioItems.length) {
+                    // Expand
+                    this.itemsToShow = this.portfolioItems.length;
+                } else {
+                    // Collapse
+                    this.itemsToShow = this.initialLimit;
+
+                    // Scroll to portfolio section top
+                    const portfolioSection = document.getElementById('portfolio');
+                    if (portfolioSection) {
+                        portfolioSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+
                 this.filterPortfolio(this.currentFilter, true);
-                this.loadMoreBtn.style.display = 'none';
             });
         }
     }
@@ -79,16 +93,22 @@ class PortfolioManager {
 
         this.isAnimating = true;
         this.currentFilter = filter;
-        
+
         // Reset limit if not forced (meaning it's a new filter selection)
         if (!force) {
-            this.itemsToShow = 5;
+            this.itemsToShow = this.initialLimit;
         }
 
         // Toggle Load More button visibility
         if (this.loadMoreBtn) {
-            if (filter === 'all' && this.itemsToShow < this.portfolioItems.length) {
-                this.loadMoreBtn.style.display = '';
+            if (filter === 'all' && this.portfolioItems.length > this.initialLimit) {
+                this.loadMoreBtn.style.display = 'inline-block';
+                // Update button text
+                if (this.itemsToShow >= this.portfolioItems.length) {
+                    this.loadMoreBtn.textContent = 'Less';
+                } else {
+                    this.loadMoreBtn.textContent = 'More';
+                }
             } else {
                 this.loadMoreBtn.style.display = 'none';
             }
@@ -98,7 +118,7 @@ class PortfolioManager {
         this.portfolioItems.forEach(item => {
             item.classList.add('filtering');
         });
-        
+
         setTimeout(() => {
             let visibleCount = 0;
             this.portfolioItems.forEach(item => {
@@ -859,10 +879,83 @@ class PortfolioManager {
     }
 }
 
+// Skills Manager Class
+class SkillsManager {
+    constructor() {
+        this.skillsSection = document.querySelector('.skills-section');
+        this.skillsGrid = document.querySelector('.skills-grid');
+        this.limit = 4;
+    }
+
+    init() {
+        if (!this.skillsSection || !this.skillsGrid) return;
+        this.processCategories();
+    }
+
+    processCategories() {
+        const categories = this.skillsGrid.querySelectorAll('.skill-category');
+
+        categories.forEach(category => {
+            const tagsContainer = category.querySelector('.skill-tags');
+            const tags = tagsContainer.querySelectorAll('.skill-tag');
+
+            if (tags.length > this.limit) {
+                // Hide excess skills
+                tags.forEach((tag, index) => {
+                    if (index >= this.limit) {
+                        tag.classList.add('hidden-skill');
+                    }
+                });
+
+                // Create button for this category
+                this.createCategoryButton(category);
+            }
+        });
+    }
+
+    createCategoryButton(category) {
+        const btn = document.createElement('button');
+        btn.className = 'skill-expand-btn';
+        btn.innerHTML = 'Learn More <i class="fas fa-chevron-down"></i>';
+
+        let isExpanded = false;
+
+        btn.addEventListener('click', () => {
+            isExpanded = !isExpanded;
+            const hiddenTags = category.querySelectorAll('.skill-tag');
+
+            if (isExpanded) {
+                hiddenTags.forEach((tag, index) => {
+                    if (index >= this.limit) {
+                        tag.classList.remove('hidden-skill');
+                        tag.style.animation = 'scaleIn 0.3s ease forwards';
+                    }
+                });
+                btn.innerHTML = 'Show Less <i class="fas fa-chevron-up"></i>';
+                btn.classList.add('active');
+            } else {
+                hiddenTags.forEach((tag, index) => {
+                    if (index >= this.limit) {
+                        tag.classList.add('hidden-skill');
+                    }
+                });
+                btn.innerHTML = 'Learn More <i class="fas fa-chevron-down"></i>';
+                btn.classList.remove('active');
+            }
+        });
+
+        // Append button to category
+        category.appendChild(btn);
+    }
+}
+
 // Initialize portfolio when DOM is loaded
 document.addEventListener('DOMContentLoaded', function () {
     const portfolioManager = new PortfolioManager();
+    const skillsManager = new SkillsManager();
+
     portfolioManager.filterPortfolio('all');
+    skillsManager.init();
 
     // Make portfolio manager globally available
     window.portfolioManager = portfolioManager;
@@ -943,6 +1036,47 @@ document.addEventListener('DOMContentLoaded', function () {
         
         .lightbox-close:hover {
             background: rgba(255, 255, 255, 0.2);
+        }
+
+        .hidden-skill {
+            display: none !important;
+        }
+
+        .skill-expand-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-family: var(--font-primary);
+            color: var(--text-secondary);
+            background: transparent;
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .skill-expand-btn:hover, .skill-expand-btn.active {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .skill-expand-btn i {
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-expand-btn.active i {
+            transform: rotate(180deg);
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
         }
     `;
 

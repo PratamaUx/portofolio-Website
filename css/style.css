@@ -158,6 +158,11 @@ a:hover {
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn:active {
+  transform: scale(0.96);
 }
 
 .btn::before {
@@ -826,7 +831,8 @@ section {
   font-size: 16px;                 /* teks lebih besar */
   color: var(--text-secondary);
   cursor: pointer;
-  transition: all var(--transition-normal);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 
@@ -849,8 +855,16 @@ section {
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: 0 10px 30px var(--shadow-light);
-  transition: all var(--transition-normal);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   background: var(--bg-primary);
+  opacity: 1;
+  transform: scale(1);
+}
+
+.portfolio-item.filtering {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
 }
 
 .portfolio-item:hover {
@@ -896,6 +910,41 @@ section {
 
 .portfolio-item:hover .portfolio-overlay {
   opacity: 1;
+}
+
+/* Load More Button Container */
+.portfolio-more-wrapper {
+  text-align: center;
+  margin-top: var(--spacing-2xl);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.load-more-btn {
+  padding: 12px 30px;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  color: var(--text-secondary);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.load-more-btn:hover {
+  background: var(--bg-secondary);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+.load-more-btn:active {
+  transform: translateY(0);
 }
 
 .project-info {

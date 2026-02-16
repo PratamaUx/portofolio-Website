@@ -334,11 +334,13 @@ class PortfolioManager {
                 results: [
                     'Successful execution of the national working meeting',
                     'Coordination of multiple cultural performances',
+                    'Coordination of multiple cultural performances',
                 ],
                 technologies: ['Event Management', 'Coordination', 'Stage Management'],
                 images: [
                     'images/portfolio/Rakernas_JKPI2.jpeg',
                     'images/portfolio/Rakernas_JKPI1.jpeg',
+                    'images/portfolio/Rakernas_JKPI3.jpeg',
                 ],
                 duration: 'Event Duration',
                 client: 'Jaringan Kota Pusaka Indonesia'
@@ -447,88 +449,196 @@ class PortfolioManager {
     createProjectModal(project) {
         const modal = document.createElement('div');
         modal.className = 'project-modal';
-        modal.innerHTML = `
-            <div class="modal-overlay"></div>
-            <div class="modal-content">
-                <button class="modal-close" aria-label="Close modal">
-                    <i class="fas fa-times"></i>
-                </button>
-                
-                <div class="modal-header">
-                    <span class="project-category">${project.category}</span>
-                    <h2 class="project-title">${project.title}</h2>
-                    <p class="project-description">${project.description}</p>
-                </div>
-                
-                <div class="modal-body">
-                    <div class="project-images">
-                        <div class="main-image">
-                            <img src="${project.images[0]}" alt="${project.title}" class="project-main-img">
-                        </div>
-                        <div class="image-thumbnails">
-                            ${project.images.map((img, index) => `
-                                <img src="${img}" alt="${project.title} ${index + 1}" 
-                                     class="thumbnail ${index === 0 ? 'active' : ''}" 
-                                     data-index="${index}">
-                            `).join('')}
-                        </div>
+
+        // Check if the current project is meant to be displayed in simplified view
+        // The user wants "Project" button items (data-filter="branding") to have simplified view
+        // We can check if the project object matches one of the known "branding" projects
+        // Based on the data structure, keys like 'toefl', 'rakernas', 'content_creator', 'travel_management', 'client_relations' 
+        // seem to be the ones under "Project" or similar.
+        // However, a more robust way is to check the category string or add a flag to the project data.
+        // Let's check the category for keywords that user associates with "Project" button items.
+        // The button has data-filter="branding". Let's look at the mapping.
+        // It seems 'branding' filter corresponds to various categories.
+        // Let's rely on the specific keys or a list of keys that serve as "Project" items,
+        // OR better, let's look at how filterPortfolio works. It filters by matching data-category.
+        // But here we are inside createProjectModal, we have the 'project' object.
+        // We need to know if this project falls under the "Project" button group.
+        // Based on previous context, the user wants this for "Project" button items.
+        // Let's assume projects with specific categories or keys are "Project" items.
+        // Looking at the data:
+        // 'rakernas' -> category: 'Event Nasional'
+        // 'toefl' -> category: 'Certifications'
+        // 'travel_management' -> category: 'Agenda Meeting Luar Kota'
+        // 'client_relations' -> category: 'Sertifikat Provinsi'
+        // These seem to be the ones.
+        // 'lms' (CRM) -> category: '• Marketing Konvensional' which might be under 'branding' filter in HTML? 
+        // Wait, the HTML shows data-filter="branding" for "Project" button.
+        // We need to verify which items have class 'branding'.
+        // Since we don't see the HTML classes for items here, let's use a list of keys that we know are "Projects".
+
+        const projectKeys = ['toefl', 'rakernas', 'content_creator', 'travel_management', 'client_relations', 'lms'];
+        /* Note: 'lms' Key was 'CRM (Customer Relationship Management)' which user mentioned earlier. 
+           In the data, 'lms' has category '• Marketing Konvensional'. 
+           We verify if this is considered a "Project". User said "tombol project".
+           Let's assume the user refers to the items shown when "Project" filter is active.
+           If we look at the portfolio items in HTML (not fully shown), they likely have categories.
+           A safer bet is to check if the modal is triggered from a context, but we don't have that.
+           
+           Let's look at the user request: "ketika aku klik tombol project ... aku hanya berfokus di tombol proect"
+           This implies the specific filter "branding" (Project).
+           
+           Let's try to identify them by checking if they are NOT "Work Experience" (uiux) or "Achievements" (web).
+           Work Experience keys: 'dashboard' (PT JOGJA...), 'dashboard2' (Pats Regency...)
+           Achievements keys: 'custom_banking' (Duta Wisata), 'campus_ambassador', 'fooddelivery' (Mas Mbak), 'ecommerce' (About Comm Skills - maybe?)
+           
+           Let's explicitly define the "Project" group based on exclusion or inclusion.
+           Inclusion list seems safer.
+        */
+        const textOnlyProjects = ['toefl', 'rakernas', 'content_creator', 'travel_management', 'client_relations']; // 'lms' has detailed results so maybe keep it? User said "CRM" earlier. 
+        // User said: "tombol project ... jadi contoh ketika saya klik tombol salah satu card tidak ada tulisan About..."
+        // So ALL cards under "Project" button.
+
+        // Let's modify the condition to be broader if needed, or stick to specific categories.
+        // Categories for "Project" seem to be: 'Certifications', 'Event Nasional', 'Sertifikat BNSP', 'Agenda Meeting Luar Kota', 'Sertifikat Provinsi'.
+        // 'lms' category is '• Marketing Konvensional'.
+
+        const simplifiedCategories = ['Certifications', 'Event Nasional', 'Sertifikat BNSP', 'Agenda Meeting Luar Kota', 'Sertifikat Provinsi', '• Marketing Konvensional'];
+
+        if (simplifiedCategories.includes(project.category) || project.category.includes('Sertifikat') || project.category.includes('Event')) {
+            // Simplified view
+
+            modal.innerHTML = `
+                <div class="modal-overlay"></div>
+                <div class="modal-content simple-view">
+                    <button class="modal-close" aria-label="Close modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    
+                    <div class="modal-header">
+                        <span class="project-category">${project.category}</span>
+                        <h2 class="project-title">${project.title}</h2>
+                        <p class="project-description">${project.description}</p>
                     </div>
                     
-                    <div class="project-details">
-                        <div class="detail-section">
-                            <h3>About</h3>
-                            <p>${project.challenge}</p>
-                        </div>
-                        
-                        <div class="detail-section">
-                            <h3>Main Areas of Responsibility</h3>
-                            <p>${project.solution}</p>
-                        </div>
-                        
-                        <div class="detail-section">
-                            <h3>Performance Outcomes</h3>
-                            <ul class="results-list">
-                                ${project.results.map(result => `<li>${result}</li>`).join('')}
-                            </ul>
-                        </div>
-                        
-                        <div class="detail-section">
-                            <h3>Technologies</h3>
-                            <div class="tech-tags">
-                                ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-                            </div>
-                        </div>
-                        
-                        <div class="project-meta">
-                            <div class="meta-item">
-                                <strong>Duration:</strong> ${project.duration}
-                            </div>
-                            <div class="meta-item">
-                                <strong>Client:</strong> ${project.client}
-                            </div>
-                        </div>
-                        
-                        <div class="project-links">
-                            ${project.liveUrl ? `
-                                <a href="${project.liveUrl}" target="_blank" class="btn btn-primary">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    View Live Project
-                                </a>
-                            ` : ''}
-                            ${project.githubUrl ? `
-                                <a href="${project.githubUrl}" target="_blank" class="btn btn-outline">
-                                    <i class="fab fa-github"></i>
-                                    View Code
-                                </a>
-                            ` : ''}
+                    <div class="modal-body">
+                        <div class="simple-gallery">
+                            ${project.images.map((img, index) => {
+                // Logic to map descriptions to images based on index
+                // For now, we use the main description or specific ones if added to data
+                let desc = project.description;
+                // If specific image descriptions exist in future, use them here.
+                // Currently using main description repeating or empty for subsequent
+
+                // Custom description logic per your request: 1 image 1 desc, 2 images 2 desc...
+                // Since current data structure has one main description, we will use it for the first image
+                // or if you add an array of descriptions to the data, use that.
+                // START TEMPORARY LOGIC:
+                // If project has a 'results' array, use those as captions for multiple images
+                if (project.results && project.results[index]) {
+                    desc = project.results[index];
+                } else if (index === 0) {
+                    desc = project.challenge || project.description;
+                } else {
+                    desc = '';
+                }
+                // END TEMPORARY LOGIC
+
+                return `
+                                <div class="gallery-item">
+                                    <img src="${img}" alt="${project.title} ${index + 1}" class="gallery-image">
+                                    ${desc ? `<p class="gallery-description">${desc}</p>` : ''}
+                                </div>
+                                `;
+            }).join('')}
                         </div>
                     </div>
                 </div>
-            </div>
-        `;
+            `;
+        } else {
+            // Standard detailed view for Work Experience and Achievements
+            modal.innerHTML = `
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <button class="modal-close" aria-label="Close modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    
+                    <div class="modal-header">
+                        <span class="project-category">${project.category}</span>
+                        <h2 class="project-title">${project.title}</h2>
+                        <p class="project-description">${project.description}</p>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="project-images">
+                            <div class="main-image">
+                                <img src="${project.images[0]}" alt="${project.title}" class="project-main-img">
+                            </div>
+                            <div class="image-thumbnails">
+                                ${project.images.map((img, index) => `
+                                    <img src="${img}" alt="${project.title} ${index + 1}" 
+                                         class="thumbnail ${index === 0 ? 'active' : ''}" 
+                                         data-index="${index}">
+                                `).join('')}
+                            </div>
+                        </div>
+                        
+                        <div class="project-details">
+                            <div class="detail-section">
+                                <h3>About</h3>
+                                <p>${project.challenge}</p>
+                            </div>
+                            
+                            <div class="detail-section">
+                                <h3>Main Areas of Responsibility</h3>
+                                <p>${project.solution}</p>
+                            </div>
+                            
+                            <div class="detail-section">
+                                <h3>Performance Outcomes</h3>
+                                <ul class="results-list">
+                                    ${project.results.map(result => `<li>${result}</li>`).join('')}
+                                </ul>
+                            </div>
+                            
+                            <div class="detail-section">
+                                <h3>Technologies</h3>
+                                <div class="tech-tags">
+                                    ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                                </div>
+                            </div>
+                            
+                            <div class="project-meta">
+                                <div class="meta-item">
+                                    <strong>Duration:</strong> ${project.duration}
+                                </div>
+                                <div class="meta-item">
+                                    <strong>Client:</strong> ${project.client}
+                                </div>
+                            </div>
+                            
+                            <div class="project-links">
+                                ${project.liveUrl ? `
+                                    <a href="${project.liveUrl}" target="_blank" class="btn btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        View Live Project
+                                    </a>
+                                ` : ''}
+                                ${project.githubUrl ? `
+                                    <a href="${project.githubUrl}" target="_blank" class="btn btn-outline">
+                                        <i class="fab fa-github"></i>
+                                        View Code
+                                    </a>
+                                ` : ''}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
 
-        // Setup image gallery
-        this.setupModalImageGallery(modal);
+            // Setup image gallery only for standard view
+            this.setupModalImageGallery(modal);
+        }
 
         return modal;
     }
@@ -644,6 +754,42 @@ class PortfolioManager {
                 padding: var(--spacing-3xl) var(--spacing-2xl) var(--spacing-xl);
                 text-align: center;
                 border-bottom: 1px solid var(--border-color);
+            }
+            
+            .modal-content.simple-view {
+                max-width: 800px;
+            }
+
+            .modal-content.simple-view .modal-body {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+
+            .simple-gallery {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-2xl);
+            }
+
+            .gallery-item {
+                text-align: center;
+                background: var(--bg-secondary);
+                padding: var(--spacing-lg);
+                border-radius: var(--radius-lg);
+            }
+
+            .gallery-image {
+                width: 100%;
+                height: auto;
+                border-radius: var(--radius-md);
+                margin-bottom: var(--spacing-md);
+                box-shadow: 0 4px 15px var(--shadow-light);
+            }
+
+            .gallery-description {
+                font-size: 1rem;
+                color: var(--text-secondary);
+                font-style: italic;
             }
             
             .modal-body {

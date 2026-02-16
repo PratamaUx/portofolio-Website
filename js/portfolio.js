@@ -5,6 +5,8 @@ class PortfolioManager {
     constructor() {
         this.filterButtons = document.querySelectorAll('.filter-btn');
         this.portfolioItems = document.querySelectorAll('.portfolio-item');
+        this.loadMoreBtn = document.getElementById('loadMoreBtn');
+        this.itemsToShow = 5;
         this.currentFilter = null;
         this.isAnimating = false;
 
@@ -13,10 +15,22 @@ class PortfolioManager {
 
     init() {
         this.setupFilterButtons();
+        this.setupLoadMoreButton();
         this.setupPortfolioItems();
         this.setupModal();
         this.setupLightbox();
         this.addKeyboardNavigation();
+    }
+
+    setupLoadMoreButton() {
+        if (this.loadMoreBtn) {
+            this.loadMoreBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.itemsToShow = this.portfolioItems.length;
+                this.filterPortfolio(this.currentFilter, true);
+                this.loadMoreBtn.style.display = 'none';
+            });
+        }
     }
 
     setupFilterButtons() {
@@ -60,29 +74,41 @@ class PortfolioManager {
         });
     }
 
-    filterPortfolio(filter) {
-        if (this.isAnimating || filter === this.currentFilter) return;
+    filterPortfolio(filter, force = false) {
+        if (this.isAnimating || (filter === this.currentFilter && !force)) return;
 
         this.isAnimating = true;
         this.currentFilter = filter;
+        
+        // Reset limit if not forced (meaning it's a new filter selection)
+        if (!force) {
+            this.itemsToShow = 5;
+        }
+
+        // Toggle Load More button visibility
+        if (this.loadMoreBtn) {
+            if (filter === 'all' && this.itemsToShow < this.portfolioItems.length) {
+                this.loadMoreBtn.style.display = '';
+            } else {
+                this.loadMoreBtn.style.display = 'none';
+            }
+        }
 
         // Hide all items first
         this.portfolioItems.forEach(item => {
             item.classList.add('filtering');
         });
-        this.allCounter = 0;
-
+        
         setTimeout(() => {
+            let visibleCount = 0;
             this.portfolioItems.forEach(item => {
                 const categories = item.getAttribute('data-category').split(' ');
                 let shouldShow = false;
 
                 if (filter === 'all') {
-                    if (!this.allCounter) this.allCounter = 0;
-
-                    if (this.allCounter < 5) {
+                    if (visibleCount < this.itemsToShow) {
                         shouldShow = true;
-                        this.allCounter++;
+                        visibleCount++;
                     }
                 } else {
                     shouldShow = categories.includes(filter);

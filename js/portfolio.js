@@ -194,7 +194,7 @@ class PortfolioManager {
         const projects = {
             ecommerce: {
                 title: 'About Communication Skills',
-                category: 'Publik Speaking',
+                category: 'Public Speaking',
                 description: 'Define a clear professional identity based on strengths, experience, and career goals.',
                 challenge: 'Differences in perspective and interests often make strategic messages difficult to fully understand by various parties.',
                 solution: 'I deliver information in a clear, structured, and tailored manner to the audience of leaders, teams, and partners—combining data, context, and easy-to-understand language.',
@@ -212,12 +212,12 @@ class PortfolioManager {
                 ],
                 liveUrl: 'https://shopease-demo.com',
                 githubUrl: 'https://github.com/wahyu/shopease',
-                duration: '3 bulan',
+                duration: '3 Months',
                 client: 'StartupCommerce Inc.'
             },
             //DUTA WISATA PATI
             custom_banking: {
-                title: 'Duta Wisata Kabupaten Pati',
+                title: 'Pati Regency Tourism Ambassador',
                 category: 'Regency Achievements',
                 description: '',
                 challenge: 'Recognized as a top regional Tourism Ambassador, demonstrating strong communication, cultural expertise, and stakeholder engagement in collaboration with Dinas Pariwisata Pati.',
@@ -264,14 +264,12 @@ class PortfolioManager {
                 solution: 'Managed executive business travel scheduling and budgeting, coordinated strategic client communications and meetings, and maintained systematic documentation of correspondence and meeting records.',
 
                 results: [
-                    'Ketepatan jadwal dinas ↑ 95% ',
-                    'Anggaran lebih akurat, tekan pembengkakan biaya',
-                    'Respons klien cepat, hubungan profesional terjaga',
-                    'Risiko miskomunikasi & keterlambatan administrasi ↓ signifikan',
-
-
+                    'Service schedule accuracy ↑ 95%',
+                    'More accurate budgeting, minimized cost overruns',
+                    'Fast client response, maintained professional relationships',
+                    'Risk of miscommunication & administrative delays ↓ significantly',
                 ],
-                technologies: ['MS Office', 'Google Workspace', 'Travel app', 'Arsip digital.'],
+                technologies: ['MS Office', 'Google Workspace', 'Travel app', 'Digital Archiving'],
                 images: [
                     'images/portfolio/Membangunrelasi1.jpg',
                     'images/portfolio/Membangunrelasi2.jpg',
@@ -280,7 +278,7 @@ class PortfolioManager {
 
                 ],
                 liveUrl: 'https://www.instagram.com/sekretariatdireksi?igsh=MTljczRqaHh6eTB4MQ==',
-                duration: '2 Tahun',
+                duration: '2 Years',
                 client: 'Board of Directors PT. Jogja Tama Tri Cita'
             },
             dashboard2: {   // ✅ PUSKESMAS DUKUHSETI
@@ -303,7 +301,7 @@ class PortfolioManager {
                     'images/portfolio/Pekerjaan_Pusk3.jpeg',
                 ],
 
-                duration: '2 Tahun',
+                duration: '2 Years',
                 client: 'Internal (all areas of Pati Health Office) & External (Community Health Centers, Hospitals, partner agencies, community)'
             },
             // PROJECT
@@ -326,15 +324,15 @@ class PortfolioManager {
             },
             // RAKERNAS JKPI 
             rakernas: {
-                title: 'RAKERNAS JKPI INDONESIA',
-                category: 'Event Nasional',
-                description: 'Stage Manager Jaringan Kota Pusaka Indonesia',
+                title: 'JKPI NATIONAL MEETING INDONESIA',
+                category: 'National Event',
+                description: 'Stage Manager of Indonesian Heritage Cities Network',
                 challenge: 'Managing stage operations for a national level event involving multiple stakeholders.',
                 solution: 'Coordinated stage activities, ensured smooth flow of the event, and managed technical requirements.',
                 results: [
                     'Successful execution of the national working meeting',
-                    'Coordination of multiple cultural performances',
-                    'Coordination of multiple cultural performances',
+                    'Successfully Holding the Indonesian Heritage City Network Event',
+                    'Presenting 3 speakers from UNESCO, Malaysia and Indonesia',
                 ],
                 technologies: ['Event Management', 'Coordination', 'Stage Management'],
                 images: [
@@ -347,27 +345,28 @@ class PortfolioManager {
             },
             content_creator: {
                 title: 'CONTENT CREATOR',
-                category: 'Sertifikat BNSP',
-                description: 'Certified Content Creator by BNSP',
+                category: 'Video Production',
+                description: 'Social Media',
                 challenge: 'Demonstrating competency in content creation professionally.',
                 solution: 'Completed certification process for content creation, proving skills in planning, producing, and evaluating content.',
                 results: [
-                    'BNSP Certification for Content Creator',
+                    'CNN Indonesia Video Production in Pati Regency',
                 ],
                 technologies: ['Content Creation', 'Social Media Strategy'],
                 images: [
                     'images/portfolio/Pembuatan_Konten.jpeg',
 
+
                 ],
-                duration: '-',
-                client: 'BNSP'
+
+                client: 'CNN Indonesia'
             },
 
             // PENDAMPINGAN PERJALANAN DINAS
             travel_management: {
-                title: 'PENDAMPINGAN PERJALANAN DINAS',
-                category: 'Agenda Meeting Luar Kota',
-                description: 'Sekretaris Direksi',
+                title: 'OFFICIAL TRAVEL SUPPORT',
+                category: 'Out of Town Meeting Agenda',
+                description: 'Executive Secretary',
                 challenge: 'Managing executive travel and meeting schedules efficiently.',
                 solution: 'Arranged travel logistics, accompanied directors, and ensured meeting objectives were met.',
                 results: [
@@ -384,31 +383,37 @@ class PortfolioManager {
             },
             // MENJAGA HUBUNGAN CLIENT
             client_relations: {
-                title: 'MENJAGA HUBUNGAN CLIENT',
-                category: 'Sertifikat Provinsi',
+                title: 'CLIENT RELATIONSHIP MAINTENANCE',
+                category: 'Client Relationship Management',
                 description: 'Maintaining professional relationships with clients.',
                 challenge: 'Building and sustaining long-term professional relationships.',
                 solution: 'Engaged with clients regularly, addressed their needs, and ensured satisfaction.',
                 results: [
                     'Improved client retention',
                     'Stronger professional network',
+                    'Increased client satisfaction',
+                    'Enhanced client loyalty',
+
                 ],
                 technologies: ['Communication', 'Relationship Management'],
                 images: [
                     'images/portfolio/MenjagaHubunganClient4.jpeg',
+                    'images/portfolio/MenjagaHubunganClient2.jpeg',
+                    'images/portfolio/MenjagaHubunganClient3.jpeg',
+                    'images/portfolio/MenjagaHubunganClient1.jpeg',
                 ],
                 duration: 'Ongoing',
                 client: 'Various Clients'
             },
             lms: {
                 title: 'CRM (Customer Relationship Management)',
-                category: '• Marketing Konvensional',
-                description: 'Meningkatkan retensi pelanggan, repeat order dan life time value pelanggan.',
-                challenge: 'Pengelolaan Data dan Segmentasi Pelanggan, Perancangan dan Implementasi Kampanye CRM,Analisis Kinerja dan Penguatan Hubungan Pelanggan..',
-                solution: 'Implementasi Sales Courtesy untuk menjaga kepercayaan pelanggan, Mengadakan Sales Call dan Visit serta Telemarketing dan Analisis Kebutuhan serta jaringan pelanggan.',
+                category: 'Conventional Marketing',
+                description: 'Increasing customer retention, repeat orders, and customer lifetime value.',
+                challenge: 'Data Management and Customer Segmentation, Design and Implementation of CRM Campaigns, Performance Analysis and Strengthening Customer Relationships.',
+                solution: 'Implementation of Sales Courtesy to maintain customer trust, Conducting Sales Calls and Visits as well as Telemarketing and Analysis of Needs and customer networks.',
                 results: [
                     'Strategic Thinking & Customer Journey 90%',
-                    'productivity meningkat 60%',
+                    'productivity increased 60%',
                 ],
                 technologies: ['CRM Website', 'Microsoft Excel'],
                 images: [
@@ -416,13 +421,13 @@ class PortfolioManager {
                     'images/portfolio/Sales2.png',
                     'images/portfolio/Sales3.png'
                 ],
-                duration: '1 Tahun',
-                client: 'Sertifikasi dan Pelatihan'
+                duration: '1 Year',
+                client: 'PT'
             },
             fooddelivery: {
-                title: 'Mas Mbak Jawa Tengah 2024',
+                title: 'Mas & Mbak Central Java 2024',
                 category: 'Provincial Achievements',
-                description: 'Predikat Mas Favorit Jawa Tengah.',
+                description: 'Favorite Mas of Central Java title.',
                 challenge: 'A competitive program organized by the provincial tourism authority of Dinas Pariwisata Provinsi Jawa Tengah to identify and develop high-potential young talents to support and promote tourism across Central Java.',
                 solution: 'Conducted regional tourism research and completed intensive professional coaching, strengthened through bilingual interviews, debates, and presentation training to enhance communication and analytical skills across Central Java Province.',
                 results: [
@@ -440,6 +445,44 @@ class PortfolioManager {
                 ],
                 duration: '1 year',
                 client: 'Tourist Villages and Tourists'
+            },
+            narasumber: {
+                title: 'Guest Speaker',
+                category: 'Public Speaking',
+                description: 'Professional Speaker & Resource Person',
+                challenge: 'Delivering impactful presentations and sharing knowledge with diverse audiences.',
+                solution: 'Structured content delivery and interactive sessions to engage participants effectively.',
+                results: [
+                    'Speaker for various professional events',
+                    'Shared expertise on communication and leadership',
+                    'Engaged with diverse audience groups'
+                ],
+                technologies: ['Public Speaking', 'Presentation', 'Communication'],
+                images: [
+                    'images/portfolio/Wahyu_Narasumber.jpeg'
+                ],
+                duration: 'Ongoing',
+                client: 'Various Organizations'
+            },
+            mc: {
+                title: 'Master of Ceremonies',
+                category: 'Master of Ceremonies',
+                description: 'Professional Master of Ceremonies for various events.',
+                challenge: 'Ensuring smooth event flow and engaging the audience.',
+                solution: 'Led the event with energy, professionalism, and adherence to the rundown.',
+                results: [
+                    'Hosted formal and informal events',
+                    'Maintained audience engagement',
+                    'Ensured timely execution of event agenda'
+                ],
+                technologies: ['Public Speaking', 'Event Management'],
+                images: [
+                    'images/portfolio/MC.jpeg',
+                    'images/portfolio/MC_Wisuda.jpeg',
+                    'images/portfolio/MCWisuda2.jpeg'
+                ],
+                duration: 'Ongoing',
+                client: 'Various Clients'
             }
         };
 
@@ -502,7 +545,7 @@ class PortfolioManager {
         // Categories for "Project" seem to be: 'Certifications', 'Event Nasional', 'Sertifikat BNSP', 'Agenda Meeting Luar Kota', 'Sertifikat Provinsi'.
         // 'lms' category is '• Marketing Konvensional'.
 
-        const simplifiedCategories = ['Certifications', 'Event Nasional', 'Sertifikat BNSP', 'Agenda Meeting Luar Kota', 'Sertifikat Provinsi', '• Marketing Konvensional'];
+        const simplifiedCategories = ['Certifications', 'National Event', 'BNSP Certificate', 'Out of Town Meeting Agenda', 'Provincial Certificate', 'Conventional Marketing', 'Public Speaking', 'Master of Ceremonies', 'Client Relationship Management', 'Video Production'];
 
         if (simplifiedCategories.includes(project.category) || project.category.includes('Sertifikat') || project.category.includes('Event')) {
             // Simplified view

@@ -284,7 +284,7 @@ class PortfolioManager {
             dashboard2: {   // ✅ PUSKESMAS DUKUHSETI
                 title: 'Pati Regency Health Office',
                 category: 'Government Agencies',
-                description: 'Administrative Staff',
+                description: 'HR Operation',
                 challenge: 'A regional public health authority overseeing the planning, implementation, and administration of community health programs, supported by integrated service units and standardized operational procedures to enhance public healthcare delivery and administrative efficiency.',
                 solution: 'Managed incoming and outgoing correspondence (manual and digital), verified document completeness and reports, ensured timely document distribution, and supported meetings through scheduling, minute-taking, and administrative coordination.',
                 results: [

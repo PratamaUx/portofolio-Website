@@ -1282,3 +1282,44 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = { PortfolioManager };
 }
 
+// PDF Download Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const downloadPdfBtn = document.getElementById('downloadPdfBtn');
+    if (downloadPdfBtn) {
+        downloadPdfBtn.addEventListener('click', () => {
+            const originalText = downloadPdfBtn.innerHTML;
+            downloadPdfBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating PDF...';
+            downloadPdfBtn.disabled = true;
+
+            // Find and click the 'Load More' button to expand all portfolio items before printing
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            if (loadMoreBtn && loadMoreBtn.innerText.includes('More')) {
+                loadMoreBtn.click();
+            }
+
+            // Small timeout to allow everything to render (e.g. load more animation)
+            setTimeout(() => {
+                const element = document.body;
+
+                const opt = {
+                    margin: [10, 10, 10, 10], // Margin in mm
+                    filename: 'Wahyu_Yoga_Pratama_Portfolio.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2, useCORS: true, logging: false },
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                    pagebreak: { mode: ['css', 'legacy'] }
+                };
+
+                html2pdf().set(opt).from(element).save().then(() => {
+                    downloadPdfBtn.innerHTML = originalText;
+                    downloadPdfBtn.disabled = false;
+                }).catch(err => {
+                    console.error('PDF generation error', err);
+                    downloadPdfBtn.innerHTML = originalText;
+                    downloadPdfBtn.disabled = false;
+                    alert('Failed to generate PDF. Check console for details.');
+                });
+            }, 800);
+        });
+    }
+});
